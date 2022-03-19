@@ -13,9 +13,8 @@
 	
 4 screens are availables : Explore, Matches, Messages and Profile. You'll find some components like Card Component to pass props and variant. No frameworks UI like Bootstrap or Material UI are used.
 
-- **Easy to use** 🤘
-- **Made with Expo** ⚡
-- **TypeScript supported** 🌞
+- **Easy to use**
+- **Made with Expo / React-Native / JS / TS** 
 
 
 ## Demo
