@@ -19,7 +19,7 @@ const SignIn = () => (
 
       <View style={styles.containerMatches}>
         <View style={styles.top}>
-          <Text style={styles.title}>Matches</Text>
+          <Text style={styles.signIntitle}>Sign In</Text>
         </View>
       </View>
     </ImageBackground>
