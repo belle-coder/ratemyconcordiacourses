@@ -10,7 +10,7 @@ const ProfileItem = ({
   info2,
   info3,
   info4,
-  location,
+//  location,
   matches,
   name,
 }: ProfileItemT) => (
@@ -22,10 +22,10 @@ const ProfileItem = ({
     </View>
 
     <Text style={styles.name}>{name}</Text>
-
+{/*
     <Text style={styles.descriptionProfileItem}>
       {age} - {location}
-    </Text>
+</Text>*/}
 
     <View style={styles.info}>
       <Text style={styles.iconProfile}>
