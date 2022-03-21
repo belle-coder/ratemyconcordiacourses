@@ -32,7 +32,6 @@ const Home = () => {
                 image={item.image}
                 name={item.name}
                 description={item.description}
-                matches={item.match}
               />
             </Card>
           ))}
