@@ -230,7 +230,7 @@ export default StyleSheet.create({
     alignItems: "center",
   },
   title: { paddingBottom: 10, fontSize: 22, color: DARK_GRAY },
-  signIntitle: {paddingBottom: 10, fontSize: 22, color: "#831F18", textAlign: "center", marginTop: 150},
+  signIntitle: {paddingBottom: 10, fontSize: 22, color: DARK_GRAY, textAlign: "center", marginTop: 150},
 
   // CONTAINER - HOME
   containerHome: {
@@ -241,7 +241,7 @@ export default StyleSheet.create({
   containerMatches: {
     justifyContent: "space-between",
     flex: 1,
-    paddingHorizontal: 10,
+    paddingHorizontal: 10,  
   },
 
   // CONTAINER - MESSAGES
@@ -275,8 +275,6 @@ export default StyleSheet.create({
   },
   loginTextButton: {
     fontSize: 15,
-    color: "#281111",
-    paddingLeft: 5,
   },
   circledButton: {
     width: 50,
@@ -304,8 +302,8 @@ export default StyleSheet.create({
     marginLeft: 10,
     height: 50,
     borderRadius: 25,
-    backgroundColor: WHITE,
     paddingHorizontal: 20,
+    width: 120,
   },
 
   // MENU

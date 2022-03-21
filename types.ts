@@ -53,3 +53,8 @@ export type DataT = {
   info4?: string;
   location?: string;
 };
+
+export type Buttons = {
+  id: number;
+  name: string;
+};
