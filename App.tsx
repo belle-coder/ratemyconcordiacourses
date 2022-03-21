@@ -53,14 +53,14 @@ const App = () => (
             />
 
           <Tab.Screen
-              name="Explore"
+              name="SignIn"
               component={SignIn}
               options={{
                 tabBarIcon: ({ focused }) => (
                   <TabBarIcon
                     focused={focused}
                     iconName="search"
-                    text="Explore"
+                    text="Sign In"
                   />
                 ),
               }}
