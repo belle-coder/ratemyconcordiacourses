@@ -18,9 +18,14 @@ const SignIn = () => (
     >
 
     <Text style={styles.signIntitle}>Sign In</Text>
-    <TouchableOpacity style={styles.loginButton}>
-      <Text style={styles.loginTextButton}>Sign up</Text>
-    </TouchableOpacity>
+    <View>
+      <TouchableOpacity style={styles.loginButton}>
+        <Text style={styles.loginTextButton}>Login</Text>
+      </TouchableOpacity>
+      <TouchableOpacity style={styles.loginButton}>
+        <Text style={styles.loginTextButton}>Sign up</Text>
+      </TouchableOpacity>
+    </View>
     </ImageBackground>
 );
 
