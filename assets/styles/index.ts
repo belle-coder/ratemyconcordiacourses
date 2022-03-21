@@ -230,7 +230,7 @@ export default StyleSheet.create({
     alignItems: "center",
   },
   title: { paddingBottom: 10, fontSize: 22, color: DARK_GRAY },
-  signIntitle: {paddingBottom: 10, fontSize: 22, color: "#831F18"},
+  signIntitle: {paddingBottom: 10, fontSize: 22, color: "#831F18", marginLeft:150, marginTop:150},
 
   // CONTAINER - HOME
   containerHome: {
