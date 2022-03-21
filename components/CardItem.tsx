@@ -15,7 +15,6 @@ const CardItem = ({
   hasActions,
   hasVariant,
   image,
-  isOnline,
   matches,
   name,
 }: CardItemT) => {
@@ -65,9 +64,7 @@ const CardItem = ({
       {/* STATUS */}
       {!description && (
         <View style={styles.status}>
-          <View style={isOnline ? styles.online : styles.offline} />
           <Text style={styles.statusText}>
-            {isOnline ? "Online" : "Offline"}
           </Text>
         </View>
       )}
@@ -75,9 +72,9 @@ const CardItem = ({
       {/* ACTIONS */}
       {hasActions && (
         <View style={styles.actionsCardItem}>
-          <TouchableOpacity style={styles.miniButton}>
+{/*          <TouchableOpacity style={styles.miniButton}>
             <Icon name="star" color={STAR_ACTIONS} size={14} />
-          </TouchableOpacity>
+      </TouchableOpacity>*/}
 
           <TouchableOpacity style={styles.button}>
             <Icon name="heart" color={LIKE_ACTIONS} size={25} />
@@ -87,9 +84,9 @@ const CardItem = ({
             <Icon name="close" color={DISLIKE_ACTIONS} size={25} />
           </TouchableOpacity>
 
-          <TouchableOpacity style={styles.miniButton}>
+        {/*  <TouchableOpacity style={styles.miniButton}>
             <Icon name="flash" color={FLASH_ACTIONS} size={14} />
-          </TouchableOpacity>
+          </TouchableOpacity>*/}
         </View>
       )}
     </View>

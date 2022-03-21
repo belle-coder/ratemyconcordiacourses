@@ -1,14 +1,14 @@
 import { DataT } from "../../types";
 import IMAGE_01 from "../images/11.jpg";
-import IMAGE_02 from "../images/02.jpg";
-import IMAGE_03 from "../images/03.jpg";
-import IMAGE_04 from "../images/04.jpg";
-import IMAGE_05 from "../images/05.jpg";
-import IMAGE_06 from "../images/06.jpg";
-import IMAGE_07 from "../images/07.jpg";
-import IMAGE_08 from "../images/08.jpg";
-import IMAGE_09 from "../images/09.jpg";
-import IMAGE_10 from "../images/10.jpg";
+import IMAGE_02 from "../images/mother.jpg";
+import IMAGE_03 from "../images/database.jpg";
+import IMAGE_04 from "../images/network.jpg";
+import IMAGE_05 from "../images/interaction1.jpg";
+import IMAGE_06 from "../images/brush1.jpg";
+import IMAGE_07 from "../images/Structure.jpg";
+import IMAGE_08 from "../images/brain.jpg";
+import IMAGE_09 from "../images/ob2.jpg";
+import IMAGE_10 from "../images/analytics2.jpg";
 
 const data: DataT[] = [
   {
@@ -19,109 +19,109 @@ const data: DataT[] = [
     description:
       "Introduction to Java and Object Oriented Programming",
     message:
-      "I will go back to Gotham and I will fight men Iike this but I will not become an executioner.",
+      "",
     image: IMAGE_01,
   },
   {
     id: 2,
-    name: "Clementine Bauch",
+    name: "COMP 228",
     match: "93",
     description:
-      "Full-time Traveller. Globe Trotter. Occasional Photographer. Part time Singer/Dancer.",
+      "Computer Hardware",
     isOnline: false,
-    message: "Someone like you. Someone who'll rattle the cages.",
+    message: "",
     image: IMAGE_02,
   },
   {
     id: 3,
-    name: "Ervin Howell",
+    name: "COMP 353",
     match: "45",
     description:
-      "Full-time Traveller. Globe Trotter. Occasional Photographer. Part time Singer/Dancer.",
+      "Database and storage",
     isOnline: false,
     message:
-      "Oh, hee-hee, aha. Ha, ooh, hee, ha-ha, ha-ha. And I thought my jokes were bad.",
+      "  ",
     image: IMAGE_03,
   },
   {
     id: 4,
-    name: "John Lebsack",
+    name: "COMP 445",
     match: "88",
     description:
-      "Full-time Traveller. Globe Trotter. Occasional Photographer. Part time Singer/Dancer.",
+      "Computer Networks and Communications",
     isOnline: true,
-    message: "Bats frighten me. It's time my enemies shared my dread.",
+    message: "",
     image: IMAGE_04,
   },
   {
     id: 5,
-    name: "James Dietrich",
+    name: "SOEN 357",
     match: "76",
     description:
-      "Full-time Traveller. Globe Trotter. Occasional Photographer. Part time Singer/Dancer.",
+      "User Interface and Design",
     isOnline: false,
-    message: "It's not who I am underneath but what I do that defines me.",
+    message: " ",
     image: IMAGE_05,
   },
   {
     id: 6,
-    name: "Patricia Schulist",
+    name: "SOEN 228",
     match: "95",
     description:
-      "Full-time Traveller. Globe Trotter. Occasional Photographer. Part time Singer/Dancer.",
+      "Web design",
     isOnline: true,
     message:
-      "You have nothing, nothing to threaten me with. Nothing to do with all your strength.",
+      " ",
     image: IMAGE_06,
   },
   {
     id: 7,
-    name: "Chelsey Weissnat",
+    name: "COMP 352",
     match: "67",
     description:
-      "Full-time Traveller. Globe Trotter. Occasional Photographer. Part time Singer/Dancer.",
+      "Data Structure and Algorithms",
     isOnline: true,
     message:
-      "Never start with the head. The victim gets all fuzzy. He can't feel the next... See?",
+      "",
     image: IMAGE_07,
   },
   {
     id: 8,
-    name: "Nicky Runol",
+    name: "PHIL 210",
     match: "85",
     description:
-      "Full-time Traveller. Globe Trotter. Occasional Photographer. Part time Singer/Dancer.",
+      "Introduction to Critical Thinking",
     age: "27",
-    location: "Irvine, CA",
-    info1: 'Straight, Single, 5"10',
-    info2: "Tea Totaller, Loves Photography & Travel",
-    info3: "Beaches, Mountain, Cafe, Movies",
-    info4: "Last seen: 23h ago",
+    location: "location",
+    info1: 'Approved general electives',
+    info2: "Can be taken remote",
+    info3: "Can be taken remote",
+    info4: "Last seen: test ago",
     isOnline: true,
     message:
-      "And as for the television's so-called plan, Batman has no jurisdiction.",
+      "hellon.",
     image: IMAGE_08,
   },
   {
     id: 9,
-    name: "Glenna Reichert",
+    name: "MANA 202",
     match: "74",
     description:
-      "Full-time Traveller. Globe Trotter. Occasional Photographer. Part time Singer/Dancer.",
+      "Introduction to Human Behavior in Organisations",
     isOnline: true,
     message:
-      "This is what happens when an unstoppable force meets an immovable object.",
+      "nothing",
     image: IMAGE_09,
   },
   {
     id: 10,
-    name: "Kurtis DuBuque",
+    name: "MARK 201",
     match: "98",
     description:
-      "Full-time Traveller. Globe Trotter. Occasional Photographer. Part time Singer/Dancer.",
+      "Introduction to Marketing",
     isOnline: false,
     message:
-      "You want order in Gotham. Batman must take off his mask and turn himself in.",
+      "messages in dms",
     image: IMAGE_10,
   },
 ];

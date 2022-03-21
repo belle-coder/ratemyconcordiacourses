@@ -15,7 +15,7 @@ const Home = () => {
     >
       <View style={styles.containerHome}>
         <View style={styles.top}>
-          <City />
+       {  /* <City />*/}
           <Filters />
         </View>
 

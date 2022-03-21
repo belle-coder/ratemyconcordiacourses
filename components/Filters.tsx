@@ -6,9 +6,11 @@ import styles, { DARK_GRAY } from "../assets/styles";
 const Filters = () => (
   <TouchableOpacity style={styles.filters}>
     <Text style={styles.filtersText}>
-      <Icon name="filter" size={13} color={DARK_GRAY} /> Filters
+             {/**<Icon name="filter" size={13} color={DARK_GRAY} /> */}
+       Go Back 
     </Text>
   </TouchableOpacity>
 );
 
 export default Filters;
+
