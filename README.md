@@ -19,7 +19,7 @@
 
 ## Demo
 
-You can try it here : [insert expo link]
+You can try it here : https://expo.dev/@reacoder/Rate-My-Concordia-Courses?serviceType=classic&distribution=expo-go
 
 ## Screenshots
 

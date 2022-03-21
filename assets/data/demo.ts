@@ -5,7 +5,7 @@ import IMAGE_03 from "../images/database.jpg";
 import IMAGE_04 from "../images/network.jpg";
 import IMAGE_05 from "../images/interaction1.jpg";
 import IMAGE_06 from "../images/brush1.jpg";
-import IMAGE_07 from "../images/Structure.jpg";
+import IMAGE_07 from "../images/structure.jpg";
 import IMAGE_08 from "../images/brain.jpg";
 import IMAGE_09 from "../images/ob2.jpg";
 import IMAGE_10 from "../images/analytics2.jpg";
