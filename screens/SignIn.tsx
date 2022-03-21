@@ -17,14 +17,10 @@ const SignIn = () => (
       style={styles.bg}
     >
 
-      <View style={styles.containerMatches}>
-        <View style={styles.top}>
-          <Text style={styles.signIntitle}>Sign In</Text>
-          <TouchableOpacity style={styles.loginButton}>
-            <Text style={styles.loginTextButton}>Sign up</Text>
-          </TouchableOpacity>
-        </View>
-      </View>
+    <Text style={styles.signIntitle}>Sign In</Text>
+    <TouchableOpacity style={styles.loginButton}>
+      <Text style={styles.loginTextButton}>Sign up</Text>
+    </TouchableOpacity>
     </ImageBackground>
 );
 
