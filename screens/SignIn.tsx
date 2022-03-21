@@ -16,6 +16,12 @@ const SignIn = () => (
       source={require("../assets/images/bg.png")}
       style={styles.bg}
     >
+
+      <View style={styles.containerMatches}>
+        <View style={styles.top}>
+          <Text style={styles.title}>Matches</Text>
+        </View>
+      </View>
     </ImageBackground>
 );
 
