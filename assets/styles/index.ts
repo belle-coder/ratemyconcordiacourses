@@ -273,6 +273,11 @@ export default StyleSheet.create({
     color: WHITE,
     paddingLeft: 5,
   },
+  loginTextButton: {
+    fontSize: 15,
+    color: "#281111",
+    paddingLeft: 5,
+  },
   circledButton: {
     width: 50,
     height: 50,
@@ -290,6 +295,16 @@ export default StyleSheet.create({
     height: 50,
     borderRadius: 25,
     backgroundColor: SECONDARY_COLOR,
+    paddingHorizontal: 20,
+  },
+  loginButton: {
+    justifyContent: "center",
+    flexDirection: "row",
+    alignItems: "center",
+    marginLeft: 10,
+    height: 50,
+    borderRadius: 25,
+    backgroundColor: WHITE,
     paddingHorizontal: 20,
   },
 
