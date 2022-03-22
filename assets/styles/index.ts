@@ -232,6 +232,32 @@ export default StyleSheet.create({
   title: { paddingBottom: 10, fontSize: 22, color: DARK_GRAY },
   signIntitle: {paddingBottom: 10, fontSize: 22, color: DARK_GRAY, textAlign: "center", marginTop: 150},
 
+  // INPUT - SIGN IN
+  signIninput: {
+    height: 40,
+    margin: 12,
+    backgroundColor: "#f3f3f6",
+    elevation: 1,
+    padding: 10,
+    borderRadius: 20,
+    fontSize: 14,
+  },
+
+  // INPUT FIELD TEXT - SIGN IN
+  signInFieldHeaders: {
+    marginTop: 10,
+    marginLeft: 20,
+    fontSize: 16,
+  },
+
+  // CONTAINER - SIGN IN
+  containerSignIn: {
+    justifyContent: "center",
+    flexDirection: "row",
+    alignItems: "center",
+    top: 20,
+  },
+
   // CONTAINER - HOME
   containerHome: {
     marginHorizontal: 10,
@@ -297,13 +323,12 @@ export default StyleSheet.create({
   },
   loginButton: {
     justifyContent: "center",
-    flexDirection: "row",
     alignItems: "center",
-    marginLeft: 10,
     height: 50,
     borderRadius: 25,
     paddingHorizontal: 20,
     width: 120,
+    elevation: 1,
   },
 
   // MENU
