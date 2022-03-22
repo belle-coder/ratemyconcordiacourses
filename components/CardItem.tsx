@@ -27,6 +27,8 @@ const CardItem = ({
       width: hasVariant ? fullWidth / 2 - 30 : fullWidth - 80,
       height: hasVariant ? 170 : 350,
       margin: hasVariant ? 0 : 20,
+      borderColor: "#f3f3f6",
+      borderWidth: 1,
     },
   ];
 
@@ -77,7 +79,7 @@ const CardItem = ({
       </TouchableOpacity>*/}
 
           <TouchableOpacity style={styles.button}>
-            <Icon name="heart" color={LIKE_ACTIONS} size={25} />
+            <Icon name="heart" color="#D2132A" size={25} />
           </TouchableOpacity>
 
           <TouchableOpacity style={styles.button}>

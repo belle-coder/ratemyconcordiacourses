@@ -9,7 +9,7 @@ import {
 } from "react-native";
 import styles from "../assets/styles";
 
-function SignIn() {
+function SignUp() {
 
   const [values, setValues] = React.useState({email: '', password: ''});
   const [isSecureEntry, setIsSecureEntry] = React.useState(true);  
@@ -32,39 +32,42 @@ function SignIn() {
       style={styles.bg}
     >
 
-    <Text style={styles.signIntitle}>Sign In</Text>
-
-    <Text style={styles.signInFieldHeaders}>Email</Text>
-    <SafeAreaView>
-      <TextInput
-        placeholder="Please enter your email address"
-        style={styles.signIninput}
-        onChangeText = {(text) => {handleChange('email', text), validateEmail(text)}}          value={values.email}
-      />
-    </SafeAreaView>
-
-    <Text style = {styles.signInFieldHeaders}>Password</Text>
-    <SafeAreaView>
-      <TextInput
-          placeholder = "Please enter your password"
-          style={styles.signIninput}
-          onChangeText = {(text) => handleChange('password', text)}
-          secureTextEntry = {isSecureEntry}
-          value={values.password}
+    <View style={[styles.containerHome, styles.containerSignIn]}>
+      <Text style={styles.signIntitle}>Sign In</Text>
+      <SafeAreaView>
+        <TextInput
+          placeholder="Email"
+          style={[styles.signIninput, {marginTop: 20}]}
+          onChangeText = {(text) => {handleChange('email', text), validateEmail(text)}}
+          value={values.email}
         />
-    </SafeAreaView>
+      </SafeAreaView>
 
-    <View style={styles.containerSignIn}>
-      <TouchableOpacity style={[styles.loginButton, {backgroundColor: "#D2132A"}]}>
-        <Text style={[styles.loginTextButton, {color: "#FFFFFF"}]}>Log in</Text>
-      </TouchableOpacity>
+      <SafeAreaView>
+        <TextInput
+            placeholder = "Password"
+            style={styles.signIninput}
+            onChangeText = {(text) => handleChange('password', text)}
+            secureTextEntry = {isSecureEntry}
+            value={values.password}
+          />
+      </SafeAreaView>
 
-      <TouchableOpacity style={[styles.loginButton, {backgroundColor: "#FFFFFF"}, {marginLeft: 30}]}>
-        <Text style={[styles.loginTextButton, {color: "#363636"}]}>Sign up</Text>
-      </TouchableOpacity>
+      <View style={styles.containerSignButton}>
+        <TouchableOpacity style={[styles.loginButton, {backgroundColor: "#D2132A"}]}>
+          <Text style={[styles.loginTextButton, {color: "#FFFFFF"}]}>Log in</Text>
+        </TouchableOpacity>
+      </View>
+
+      <View style={[styles.containerSignButton, {marginTop: 20, marginBottom: 20}]}>
+        <Text style={[{color: "#757E90"}]}>Don't have an account ? </Text>
+        <TouchableOpacity style={[{marginLeft: 5}]}>
+            <Text style={[styles.loginTextButton, {color: "#D2132A"}]}>Sign up</Text>
+          </TouchableOpacity>
+      </View>
     </View>
 
     </ImageBackground>
 )};
 
-export default SignIn;
+export default SignUp;
