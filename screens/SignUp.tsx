@@ -65,7 +65,7 @@ function SignUp() {
 
       <View style={styles.containerSignButton}>
         <TouchableOpacity style={[styles.loginButton, {backgroundColor: "#D2132A"}]}>
-          <Text style={[styles.loginTextButton, {color: "#FFFFFF"}]}>Log in</Text>
+          <Text style={[styles.loginTextButton, {color: "#FFFFFF"}]}>Sign up</Text>
         </TouchableOpacity>
       </View>
 
