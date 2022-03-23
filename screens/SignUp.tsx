@@ -11,7 +11,7 @@ import styles from "../assets/styles";
 
 function SignUp() {
 
-  const [values, setValues] = React.useState({email: '', password: ''});
+  const [values, setValues] = React.useState({email: '', password: '', password2: ''});
   const [isSecureEntry, setIsSecureEntry] = React.useState(true);  
 
   const handleChange = (name: any, value: any) => {
@@ -51,16 +51,18 @@ function SignUp() {
             secureTextEntry = {isSecureEntry}
             value={values.password}
           />
+        {values.password.length < 8 && values.password.length > 0 && <Text style={{color: "red", marginLeft: 20}}>Password must be at least 8 characters</Text>}
       </SafeAreaView>
 
       <SafeAreaView>
         <TextInput
             placeholder = "Re-enter password"
             style={styles.signIninput}
-            onChangeText = {(text) => handleChange('password', text)}
+            onChangeText = {(text) => handleChange('password2', text)}
             secureTextEntry = {isSecureEntry}
-            value={values.password}
+            value={values.password2}
           />
+        {values.password !== values.password2 && values.password2 !== '' && <Text style={{color: "red", marginLeft: 20}}>Passwords don't match. Try again.</Text>}
       </SafeAreaView>
 
       <View style={styles.containerSignButton}>

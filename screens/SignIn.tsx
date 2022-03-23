@@ -15,6 +15,7 @@ function SignUp() {
   const [isSecureEntry, setIsSecureEntry] = React.useState(true);  
 
   const handleChange = (name: any, value: any) => {
+
     setValues({
       ...values,
       [name]: value,
@@ -60,8 +61,8 @@ function SignUp() {
       </View>
 
       <View style={[styles.containerSignButton, {marginTop: 20, marginBottom: 20}]}>
-        <Text style={[{color: "#757E90"}]}>Don't have an account ? </Text>
-        <TouchableOpacity style={[{marginLeft: 5}]}>
+        <Text style={{color: "#757E90"}}>Don't have an account ? </Text>
+        <TouchableOpacity style={{marginLeft: 5}}>
             <Text style={[styles.loginTextButton, {color: "#D2132A"}]}>Sign up</Text>
           </TouchableOpacity>
       </View>
