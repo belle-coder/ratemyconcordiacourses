@@ -7,11 +7,13 @@ import {
   View,
   FlatList,
 } from "react-native";
-import { Icon, Message } from "../components";
+import { Icon, CourseInList } from "../components";
 import DEMO from "../assets/data/demo";
 import styles, { DARK_GRAY } from "../assets/styles";
+import CourseProfile from "./CourseProfile";
 
-const Messages = () => (
+
+const CourseList = ({ navigation } : any) => (
   <ImageBackground
     source={require("../assets/images/bg.png")}
     style={styles.bg}
@@ -28,12 +30,13 @@ const Messages = () => (
         data={DEMO}
         keyExtractor={(item, index) => index.toString()}
         renderItem={({ item }) => (
-          <TouchableOpacity>
-            <Message
+          <TouchableOpacity onPress={()=> navigation.navigate("CourseProfile",item.id)}>
+            <CourseInList
               image={item.image}
               name={item.name}
-              lastMessage={item.message}
+              description={item.description}
             />
+            
           </TouchableOpacity>
         )}
       />
@@ -41,4 +44,4 @@ const Messages = () => (
   </ImageBackground>
 );
 
-export default Messages;
+export default CourseList;

@@ -10,18 +10,17 @@ import { Icon, ProfileItem } from "../components";
 import DEMO from "../assets/data/demo";
 import styles, { WHITE } from "../assets/styles";
 
-const Profile = () => {
+const CourseProfile = () => {
   const {
-    age,
     image,
     info1,
     info2,
     info3,
     info4,
-    location,
     match,
+    description,
     name,
-  } = DEMO[7];
+  } = DEMO[1];
 
   return (
     <ImageBackground
@@ -52,29 +51,20 @@ const Profile = () => {
         </ImageBackground>
 
         <ProfileItem
-          matches={match}
+          match={match}
           name={name}
-          age={age}
-          location={location}
+          description={description}
           info1={info1}
           info2={info2}
           info3={info3}
           info4={info4}
         />
 
-        <View style={styles.actionsProfile}>
-          <TouchableOpacity style={styles.circledButton}>
-            <Icon name="ellipsis-horizontal" size={20} color={WHITE} />
-          </TouchableOpacity>
-
-          <TouchableOpacity style={styles.roundedButton}>
-            <Icon name="chatbubble" size={20} color={WHITE} />
-            <Text style={styles.textButton}>Start chatting</Text>
-  </TouchableOpacity>
+    <View style={styles.actionsProfile}>
         </View>
       </ScrollView>
     </ImageBackground>
   );
 };
 
-export default Profile;
+export default CourseProfile;

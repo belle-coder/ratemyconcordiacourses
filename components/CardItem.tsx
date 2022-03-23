@@ -58,7 +58,6 @@ const CardItem = ({
       {/* NAME */}
       <Text style={nameStyle}>{name}</Text>
 
-      {/* DESCRIPTION */}
       {description && (
         <Text style={styles.descriptionCardItem}>{description}</Text>
       )}
@@ -71,13 +70,8 @@ const CardItem = ({
         </View>
       )}
 
-      {/* ACTIONS */}
       {hasActions && (
         <View style={styles.actionsCardItem}>
-{/*          <TouchableOpacity style={styles.miniButton}>
-            <Icon name="star" color={STAR_ACTIONS} size={14} />
-      </TouchableOpacity>*/}
-
           <TouchableOpacity style={styles.button}>
             <Icon name="heart" color="#D2132A" size={25} />
           </TouchableOpacity>
@@ -85,10 +79,6 @@ const CardItem = ({
           <TouchableOpacity style={styles.button}>
             <Icon name="close" color={DISLIKE_ACTIONS} size={25} />
           </TouchableOpacity>
-
-        {/*  <TouchableOpacity style={styles.miniButton}>
-            <Icon name="flash" color={FLASH_ACTIONS} size={14} />
-          </TouchableOpacity>*/}
         </View>
       )}
     </View>

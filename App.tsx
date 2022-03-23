@@ -2,9 +2,11 @@ import React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from "@react-navigation/stack";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
-import { Home, Matches, Messages, Profile, SignIn, SignUp } from "./screens";
+import { Home, Matches, CourseList, CourseProfile, SignIn, SignUp, Student } from "./screens";
 import { PRIMARY_COLOR, DARK_GRAY, BLACK, WHITE } from "./assets/styles";
 import TabBarIcon from "./components/TabBarIcon";
+import { CardItem, CourseInList, ProfileItem } from './components';
+import data from './assets/data/demo';
 
 const Stack = createStackNavigator();
 const Tab = createBottomTabNavigator();
@@ -15,6 +17,7 @@ function App() {
       <Stack.Navigator initialRouteName="SignIn">
       <Stack.Screen name="SignIn" component={SignIn} options={{ headerShown: false, animationEnabled: false }}/>
       <Stack.Screen name="SignUp" component={SignUp} options={{ headerShown: false, animationEnabled: false }}/>
+      <Stack.Screen name="CourseProfile" component={CourseProfile}/>
       <Stack.Screen
       name="Tab"
       options={{ headerShown: false, animationEnabled: false }}
@@ -63,7 +66,7 @@ function App() {
                   <TabBarIcon
                     focused={focused}
                     iconName="heart"
-                    text="Matches"
+                    text="Liked"
                   />
                 ),
               }}
@@ -71,7 +74,7 @@ function App() {
 
             <Tab.Screen
               name="Course List"
-              component={Messages}
+              component={CourseList}
               options={{
                 tabBarIcon: ({ focused }) => (
                   <TabBarIcon
@@ -84,8 +87,8 @@ function App() {
             />
 
             <Tab.Screen
-              name="Profile"
-              component={Profile}
+              name="Student"
+              component={Student}
               options={{
                 tabBarIcon: ({ focused }) => (
                   <TabBarIcon
