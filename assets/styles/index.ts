@@ -296,6 +296,14 @@ export default StyleSheet.create({
     width: DIMENSION_WIDTH,
     height: 450,
   },
+  photo1: {
+    width: 250,
+    height: 250,
+    marginLeft:50,
+    marginTop:100,
+    paddingLeft: 350,
+    paddingTop: 350,
+  },
   topIconLeft: {
     paddingLeft: 20,
   },
