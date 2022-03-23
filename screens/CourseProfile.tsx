@@ -11,8 +11,9 @@ import DEMO from "../assets/data/demo";
 import styles, { WHITE } from "../assets/styles";
 
 const CourseProfile = () => {
+
   const {
-    image,
+    id,
     info1,
     info2,
     info3,
@@ -20,7 +21,8 @@ const CourseProfile = () => {
     match,
     description,
     name,
-  } = DEMO[1];
+    image,
+  } = DEMO[2];
 
   return (
     <ImageBackground
@@ -51,6 +53,8 @@ const CourseProfile = () => {
         </ImageBackground>
 
         <ProfileItem
+          id={id}
+          image={image}
           match={match}
           name={name}
           description={description}
