@@ -70,7 +70,7 @@ const Profile = () => {
           <TouchableOpacity style={styles.roundedButton}>
             <Icon name="chatbubble" size={20} color={WHITE} />
             <Text style={styles.textButton}>Start chatting</Text>
-          </TouchableOpacity>
+  </TouchableOpacity>
         </View>
       </ScrollView>
     </ImageBackground>

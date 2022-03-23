@@ -18,7 +18,7 @@ const Messages = () => (
   >
     <View style={styles.containerMessages}>
       <View style={styles.top}>
-        <Text style={styles.title}>Messages</Text>
+        <Text style={styles.title}>Course List</Text>
         <TouchableOpacity>
           <Icon name="ellipsis-vertical" color={DARK_GRAY} size={20} />
         </TouchableOpacity>

@@ -70,14 +70,14 @@ function App() {
             />
 
             <Tab.Screen
-              name="Chat"
+              name="Course List"
               component={Messages}
               options={{
                 tabBarIcon: ({ focused }) => (
                   <TabBarIcon
                     focused={focused}
-                    iconName="chatbubble"
-                    text="Chat"
+                    iconName=""
+                    text="Course List"
                   />
                 ),
               }}
