@@ -230,17 +230,57 @@ export default StyleSheet.create({
     alignItems: "center",
   },
   title: { paddingBottom: 10, fontSize: 22, color: DARK_GRAY },
+  signIntitle: {paddingBottom: 10, fontSize: 22, color: DARK_GRAY, marginLeft: 20, fontWeight: "bold"},
+
+  // INPUT - SIGN IN
+  signIninput: {
+    height: 40,
+    margin: 12,
+    backgroundColor: WHITE,
+    elevation: 1,
+    padding: 10,
+    borderRadius: 20,
+    fontSize: 14,
+  },
+
+  // INPUT FIELD TEXT - SIGN IN
+  signInFieldHeaders: {
+    marginTop: 10,
+    marginLeft: 20,
+    fontSize: 16,
+  },
+
+  // CONTAINER - SIGN IN/up
+  containerSignIn: {
+    backgroundColor: WHITE,
+    borderRadius: 15,
+    elevation: 1,
+    shadowOpacity: 0.05,
+    shadowRadius: 10,
+    shadowColor: BLACK,
+    shadowOffset: { height: 0, width: 0 },
+    top: 150,
+  },
+
+  // CONTAINER BUTTONS - SIGN IN/UP
+  containerSignButton: {
+    justifyContent: "center",
+    flexDirection: "row",
+    alignItems: "center",
+    marginTop: 20,
+  },
 
   // CONTAINER - HOME
   containerHome: {
     marginHorizontal: 10,
+    paddingTop: 50,
   },
 
   // CONTAINER - MATCHES
   containerMatches: {
     justifyContent: "space-between",
     flex: 1,
-    paddingHorizontal: 10,
+    paddingHorizontal: 10,  
   },
 
   // CONTAINER - MESSAGES
@@ -272,6 +312,10 @@ export default StyleSheet.create({
     color: WHITE,
     paddingLeft: 5,
   },
+  loginTextButton: {
+    fontSize: 15,
+    fontWeight: "bold",
+  },
   circledButton: {
     width: 50,
     height: 50,
@@ -290,6 +334,14 @@ export default StyleSheet.create({
     borderRadius: 25,
     backgroundColor: SECONDARY_COLOR,
     paddingHorizontal: 20,
+  },
+  loginButton: {
+    justifyContent: "center",
+    alignItems: "center",
+    height: 50,
+    borderRadius: 25,
+    paddingHorizontal: 20,
+    width: 200,
   },
 
   // MENU
