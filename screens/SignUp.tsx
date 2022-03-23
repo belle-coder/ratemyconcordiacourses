@@ -1,15 +1,8 @@
 import React from "react";
-import {
-  Text,
-  TouchableOpacity,
-  ImageBackground,
-  View,
-  TextInput,
-  SafeAreaView,
-} from "react-native";
+import { Text, TouchableOpacity, ImageBackground, View, TextInput, SafeAreaView } from "react-native";
 import styles from "../assets/styles";
 
-function SignUp() {
+function SignUp({ navigation } : any) {
 
   const [values, setValues] = React.useState({email: '', password: '', password2: ''});
   const [isSecureEntry, setIsSecureEntry] = React.useState(true);  
@@ -66,14 +59,14 @@ function SignUp() {
       </SafeAreaView>
 
       <View style={styles.containerSignButton}>
-        <TouchableOpacity style={[styles.loginButton, {backgroundColor: "#D2132A"}]}>
+        <TouchableOpacity style={[styles.loginButton, {backgroundColor: "#D2132A"}]} onPress={() => navigation.navigate('Tab')}>
           <Text style={[styles.loginTextButton, {color: "#FFFFFF"}]}>Sign up</Text>
         </TouchableOpacity>
       </View>
 
       <View style={[styles.containerSignButton, {marginTop: 20, marginBottom: 20}]}>
         <Text style={[{color: "#757E90"}]}>Already have an account ? </Text>
-        <TouchableOpacity style={[{marginLeft: 5}]}>
+        <TouchableOpacity style={[{marginLeft: 5}]} onPress={() => navigation.navigate('SignIn')}>
             <Text style={[styles.loginTextButton, {color: "#D2132A"}]}>Sign in</Text>
           </TouchableOpacity>
       </View>

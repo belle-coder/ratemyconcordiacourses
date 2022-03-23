@@ -1,5 +1,5 @@
-import React from "react";
-import { NavigationContainer } from "@react-navigation/native";
+import React from 'react';
+import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from "@react-navigation/stack";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { Home, Matches, Messages, Profile, SignIn, SignUp } from "./screens";
@@ -9,12 +9,15 @@ import TabBarIcon from "./components/TabBarIcon";
 const Stack = createStackNavigator();
 const Tab = createBottomTabNavigator();
 
-const App = () => (
-  <NavigationContainer>
-    <Stack.Navigator>
+function App() {
+  return (  
+    <NavigationContainer>
+      <Stack.Navigator initialRouteName="SignIn">
+      <Stack.Screen name="SignIn" component={SignIn} options={{ headerShown: false, animationEnabled: false }}/>
+      <Stack.Screen name="SignUp" component={SignUp} options={{ headerShown: false, animationEnabled: false }}/>
       <Stack.Screen
-        name="Tab"
-        options={{ headerShown: false, animationEnabled: false }}
+      name="Tab"
+      options={{ headerShown: false, animationEnabled: false }}
       >
         {() => (
           <Tab.Navigator
@@ -47,34 +50,6 @@ const App = () => (
                     focused={focused}
                     iconName="search"
                     text="Explore"
-                  />
-                ),
-              }}
-            />
-
-          <Tab.Screen
-              name="SignIn"
-              component={SignIn}
-              options={{
-                tabBarIcon: ({ focused }) => (
-                  <TabBarIcon
-                    focused={focused}
-                    iconName="search"
-                    text="Sign In"
-                  />
-                ),
-              }}
-            />
-
-          <Tab.Screen
-              name="SignUp"
-              component={SignUp}
-              options={{
-                tabBarIcon: ({ focused }) => (
-                  <TabBarIcon
-                    focused={focused}
-                    iconName="search"
-                    text="Sign Up"
                   />
                 ),
               }}
@@ -124,8 +99,9 @@ const App = () => (
           </Tab.Navigator>
         )}
       </Stack.Screen>
-    </Stack.Navigator>
-  </NavigationContainer>
-);
+      </Stack.Navigator>
+    </NavigationContainer>
+  );
+}
 
 export default App;
