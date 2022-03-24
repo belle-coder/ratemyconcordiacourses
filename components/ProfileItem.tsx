@@ -26,28 +26,28 @@ const ProfileItem = ({
     <Text style={styles.name}>{description}</Text>
     <View style={styles.info}>
       <Text style={styles.iconProfile}>
-        <Icon name="person" size={12} color={DARK_GRAY} />
+        <Icon name="star" size={12} color={DARK_GRAY} />
       </Text>
       <Text style={styles.infoContent}>{info1}</Text>
     </View>
 
     <View style={styles.info}>
       <Text style={styles.iconProfile}>
-        <Icon name="pizza" size={12} color={DARK_GRAY} />
+        <Icon name="star" size={12} color={DARK_GRAY} />
       </Text>
       <Text style={styles.infoContent}>{info2}</Text>
     </View>
 
     <View style={styles.info}>
       <Text style={styles.iconProfile}>
-        <Icon name="airplane" size={12} color={DARK_GRAY} />
+        <Icon name="star" size={12} color={DARK_GRAY} />
       </Text>
       <Text style={styles.infoContent}>{info3}</Text>
     </View>
 
     <View style={styles.info}>
       <Text style={styles.iconProfile}>
-        <Icon name="calendar" size={12} color={DARK_GRAY} />
+        <Icon name="star" size={12} color={DARK_GRAY} />
       </Text>
       <Text style={styles.infoContent}>{info4}</Text>
     </View>

@@ -1,5 +1,7 @@
 export type CardItemT = {
   description?: string;
+  hasVariant?: boolean,
+  hasActions?: boolean,
   image: any;
   matches?: string;
   name: string;
