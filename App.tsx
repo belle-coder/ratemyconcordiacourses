@@ -7,6 +7,7 @@ import { PRIMARY_COLOR, DARK_GRAY, BLACK, WHITE } from "./assets/styles";
 import TabBarIcon from "./components/TabBarIcon";
 import { CardItem, CourseInList, ProfileItem } from './components';
 import data from './assets/data/demo';
+import Questionnaire from './screens/Questionnaire';
 
 const Stack = createStackNavigator();
 const Tab = createBottomTabNavigator();
@@ -95,6 +96,19 @@ function App() {
                     focused={focused}
                     iconName="person"
                     text="Profile"
+                  />
+                ),
+              }}
+            />
+            <Tab.Screen
+              name="Questionnaire"
+              component={Questionnaire}
+              options={{
+                tabBarIcon: ({ focused }) => (
+                  <TabBarIcon
+                    focused={focused}
+                    iconName="person"
+                    text="Questionnaire"
                   />
                 ),
               }}
