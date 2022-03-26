@@ -1,8 +1,11 @@
 import React from "react";
-import styles from "../assets/styles";
+import styles, { WHITE } from "../assets/styles";
 import {TouchableOpacity, View,Text,StyleSheet,TextInput } from "react-native";
 import RNPickerSelect from 'react-native-picker-select';
 import { ScrollView, } from "react-native-gesture-handler";
+import { Rating } from 'react-native-ratings';
+import { Colors } from "react-native-paper";
+
 
 const Questionnaire = ({ navigation } : any) => {
     
@@ -20,7 +23,7 @@ const Questionnaire = ({ navigation } : any) => {
     <View style={styles.containerProfileItem}>
         
         <Text style={pickerSelectStyles.question}>
-         [Question 1 will be here]
+         Question 1 will be here
         </Text>
         <View style = {{marginLeft:10,marginTop: 10}} >
         
@@ -34,7 +37,7 @@ const Questionnaire = ({ navigation } : any) => {
         </View>
       
         <Text style={pickerSelectStyles.question}>
-         [Question 1 will be here]
+         Question 2 will be here
         </Text>
         <View style = {{marginLeft:10,marginTop: 10}} >
         
@@ -48,7 +51,7 @@ const Questionnaire = ({ navigation } : any) => {
         </View>
     
         <Text style={pickerSelectStyles.question}>
-         Question 1 will be 
+         Question 3 will be 
         </Text>
        <View style = {{marginLeft:10,marginTop: 10}} >
         
@@ -60,19 +63,28 @@ const Questionnaire = ({ navigation } : any) => {
             { label: 'No', value: 'no' },
         ]} />
         </View>
+        <Text style={pickerSelectStyles.question}>
+         Question 2 will be here
+        </Text>
      <TextInput style = {pickerSelectStyles.input}
      multiline
-     numberOfLines={4}
      placeholder= " Enter Description...">
 
      </TextInput>
+     <Rating
+  type='heart'
+  ratingCount={5}
+  imageSize={50}
+  showRating
+  fractions={2}
 
+/>
       <View style={styles.containerSignButton}>
         <TouchableOpacity style={[styles.loginButton, {backgroundColor: "blue"}]}>
           <Text style={[styles.loginTextButton, {color: "#FFFFFF"}]}>Submit</Text>
         </TouchableOpacity>
       </View>
-
+      
       
     </View>
     </View>
