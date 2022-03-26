@@ -10,8 +10,8 @@ import { Icon, ProfileItem } from "../components";
 import DEMO from "../assets/data/demo";
 import styles, { WHITE } from "../assets/styles";
 
-const CourseProfile = () => {
-
+const CourseProfile = ({route}: any) => {
+  const courseID=route.params
   const {
     id,
     info1,
@@ -22,7 +22,8 @@ const CourseProfile = () => {
     description,
     name,
     image,
-  } = DEMO[2];
+  } = DEMO[courseID-1];
+
 
   return (
     <ImageBackground

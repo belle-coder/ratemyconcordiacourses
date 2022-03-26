@@ -11,7 +11,7 @@ import { CardItem, Icon } from "../components";
 import DEMO from "../assets/data/demo";
 import styles, { DARK_GRAY } from "../assets/styles";
 
-const Matches = () => (
+const Matches = ({ navigation } : any) => (
   <ImageBackground
     source={require("../assets/images/bg.png")}
     style={styles.bg}
@@ -29,7 +29,7 @@ const Matches = () => (
         data={DEMO}
         keyExtractor={(item, index) => index.toString()}
         renderItem={({ item }) => (
-          <TouchableOpacity>
+          <TouchableOpacity onPress={()=> navigation.navigate("CourseProfile",item.id)}>
             <CardItem
               image={item.image}
               name={item.name}
