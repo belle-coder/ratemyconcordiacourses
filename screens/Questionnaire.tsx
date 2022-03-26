@@ -4,7 +4,6 @@ import {TouchableOpacity, View,Text,StyleSheet,TextInput } from "react-native";
 import RNPickerSelect from 'react-native-picker-select';
 import { ScrollView, } from "react-native-gesture-handler";
 import { Rating } from 'react-native-ratings';
-import { Colors } from "react-native-paper";
 
 
 const Questionnaire = ({ navigation } : any) => {
@@ -72,13 +71,13 @@ const Questionnaire = ({ navigation } : any) => {
 
      </TextInput>
      <Rating
-  type='heart'
+  type='star'
   ratingCount={5}
   imageSize={50}
   showRating
-  fractions={2}
+  fractions={2}/>
+  
 
-/>
       <View style={styles.containerSignButton}>
         <TouchableOpacity style={[styles.loginButton, {backgroundColor: "blue"}]}>
           <Text style={[styles.loginTextButton, {color: "#FFFFFF"}]}>Submit</Text>
