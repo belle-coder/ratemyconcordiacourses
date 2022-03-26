@@ -5,6 +5,7 @@ export type CardItemT = {
   image: any;
   matches?: string;
   name: string;
+  onHeartPress?:  any
 };
 
 export type IconT = {
