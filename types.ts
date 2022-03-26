@@ -6,6 +6,7 @@ export type CardItemT = {
   matches?: string;
   name: string;
   onHeartPress?:  any
+  onXPress?: any
 };
 
 export type IconT = {

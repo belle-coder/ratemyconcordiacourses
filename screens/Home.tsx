@@ -8,9 +8,13 @@ import DEMO from "../assets/data/demo";
 const Home = () => {
  // const [swiper, setSwiper] = useState<CardStack | null>(null);
   const swiperRef = useRef(null);
-  const onHeartPress = ()=>{
+  const onXPress = ()=>{
     swiperRef?.current?.swipeLeft();
   }
+  const onHeartPress = ()=>{
+    swiperRef?.current?.swipeRight();
+  }
+
   return (
     <ImageBackground
       source={require("../assets/images/bg.png")}
@@ -33,6 +37,7 @@ const Home = () => {
                 name={item.name}
                 description={item.description}
                 onHeartPress={onHeartPress}
+                onXPress={onXPress}
               />
             </Card>
           ))}

@@ -17,7 +17,8 @@ const CardItem = ({
   image,
   matches,
   name,
-  onHeartPress
+  onHeartPress,
+  onXPress
 }: CardItemT) => {
   // Custom styling
   const fullWidth = Dimensions.get("window").width;
@@ -73,12 +74,12 @@ const CardItem = ({
 
       {hasActions && (
         <View style={styles.actionsCardItem}>
-          <TouchableOpacity style={styles.button} onPress={onHeartPress}>
-            <Icon name="heart" color="#D2132A" size={25} />
+          <TouchableOpacity style={styles.button} onPress={onXPress}>
+            <Icon name="close" color={DISLIKE_ACTIONS} size={25} />
           </TouchableOpacity>
 
-          <TouchableOpacity style={styles.button}>
-            <Icon name="close" color={DISLIKE_ACTIONS} size={25} />
+          <TouchableOpacity style={styles.button} onPress={onHeartPress}>
+            <Icon name="heart" color="#D2132A" size={25} />
           </TouchableOpacity>
         </View>
       )}
