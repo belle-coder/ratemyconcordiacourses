@@ -31,6 +31,7 @@ const CourseProfile = ({route}: any) => {
             style={styles.bg}
         >
             <ScrollView style={styles.containerProfile}>
+
                 <ImageBackground source={image} style={styles.photo}>
                     <View style={styles.top}>
                         <TouchableOpacity>
@@ -51,6 +52,7 @@ const CourseProfile = ({route}: any) => {
                             />
                         </TouchableOpacity>
                     </View>
+
                 </ImageBackground>
 
                 <ProfileItem
@@ -63,13 +65,17 @@ const CourseProfile = ({route}: any) => {
                 />
 
 
-            </ScrollView>
 
-            <View style={styles.containerHome}>
+            </ScrollView>
+            <ImageBackground source={"../assets/images/bg.png"} style={styles.bg2}>
+
+            <View style={styles.containerReview}>
                 <ReviewSection
                     courseid={courseID}/>
             </View>
+            </ImageBackground>
         </ImageBackground>
+
     );
 };
 

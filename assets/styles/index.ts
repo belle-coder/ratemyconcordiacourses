@@ -236,6 +236,12 @@ export default StyleSheet.create({
     width: DIMENSION_WIDTH,
     height: DIMENSION_HEIGHT,
   },
+  bg2: {
+    flex: 10,
+    resizeMode: "cover",
+    width: DIMENSION_WIDTH,
+    height: DIMENSION_HEIGHT,
+  },
   top: {
     paddingTop: 50,
     marginHorizontal: 10,
