@@ -159,6 +159,20 @@ export default StyleSheet.create({
     fontSize: 12,
     paddingTop: 5,
   },
+  // COMPONENT - PROFILE ITEM
+  containerReviewItem: {
+    backgroundColor: WHITE,
+    paddingHorizontal: 10,
+    paddingBottom: 25,
+    margin: 20,
+    borderRadius: 8,
+    marginTop: -65,
+    elevation: 1,
+    shadowOpacity: 0.05,
+    shadowRadius: 10,
+    shadowColor: BLACK,
+    shadowOffset: {height: 0, width: 0},
+  },
 
   // COMPONENT - PROFILE ITEM
   containerProfileItem: {
@@ -295,6 +309,12 @@ export default StyleSheet.create({
   photo: {
     width: DIMENSION_WIDTH,
     height: 450,
+  },
+  // CONTAINER - PROFILE
+  containerReview: {
+    marginHorizontal: 0,
+    paddingTop:10,
+    marginTop: 5,
   },
   photo1: {
     width: 250,

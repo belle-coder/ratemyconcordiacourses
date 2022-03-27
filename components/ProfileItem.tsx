@@ -6,10 +6,6 @@ import styles, {DARK_GRAY, WHITE} from "../assets/styles";
 
 const ProfileItem = ({
                          id,
-                         info1,
-                         info2,
-                         info3,
-                         info4,
                          match,
                          description,
                          name,
@@ -24,34 +20,9 @@ const ProfileItem = ({
         <Text style={styles.name}>{name}</Text>
 
         <Text style={styles.name}>{description}</Text>
-        <View style={styles.info}>
-            <Text style={styles.iconProfile}>
-                <Icon name="star" size={12} color={DARK_GRAY}/>
-            </Text>
-            <Text style={styles.infoContent}>{info1}</Text>
-        </View>
 
-        <View style={styles.info}>
-            <Text style={styles.iconProfile}>
-                <Icon name="star" size={12} color={DARK_GRAY}/>
-            </Text>
-            <Text style={styles.infoContent}>{info2}</Text>
-        </View>
-
-        <View style={styles.info}>
-            <Text style={styles.iconProfile}>
-                <Icon name="star" size={12} color={DARK_GRAY}/>
-            </Text>
-            <Text style={styles.infoContent}>{info3}</Text>
-        </View>
-
-        <View style={styles.info}>
-            <Text style={styles.iconProfile}>
-                <Icon name="star" size={12} color={DARK_GRAY}/>
-            </Text>
-            <Text style={styles.infoContent}>{info4}</Text>
-        </View>
     </View>
+
 );
 
 export default ProfileItem;

@@ -4,26 +4,26 @@ import {
     View,
     Text,
     ImageBackground,
-    TouchableOpacity,
+    TouchableOpacity, FlatList,
 } from "react-native";
-import {Icon, ProfileItem} from "../components";
+import {CourseInList, Icon, ProfileItem} from "../components";
 import DEMO from "../assets/data/demo";
 import styles, {WHITE} from "../assets/styles";
+import ReviewItem from "../components/ReviewItem";
+import reviewsData from "../assets/data/reviewsdata";
+import ReviewSection from "../components/ReviewSection";
 
 const CourseProfile = ({route}: any) => {
     const courseID = route.params
+    let reviewNum=DEMO[courseID-1].reviews;
     const {
         id,
-        info1,
-        info2,
-        info3,
-        info4,
         match,
         description,
         name,
         image,
+        reviews,
     } = DEMO[courseID - 1];
-
 
     return (
         <ImageBackground
@@ -59,12 +59,16 @@ const CourseProfile = ({route}: any) => {
                     match={match}
                     name={name}
                     description={description}
-                    info1={info1}
-                    info2={info2}
-                    info3={info3}
-                    info4={info4}
+                    reviews={reviews}
                 />
+
+
             </ScrollView>
+
+            <View style={styles.containerHome}>
+                <ReviewSection
+                    courseid={courseID}/>
+            </View>
         </ImageBackground>
     );
 };
