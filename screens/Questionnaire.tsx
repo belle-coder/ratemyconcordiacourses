@@ -5,10 +5,9 @@ import RNPickerSelect from 'react-native-picker-select';
 import { ScrollView, } from "react-native-gesture-handler";
 import { Rating } from 'react-native-ratings';
 
-
 const Questionnaire = ({ navigation } : any) => {
-    
-  return (
+   
+    return (
     <ScrollView>
     <View style={{marginTop :60}}>
     <View>
@@ -22,7 +21,7 @@ const Questionnaire = ({ navigation } : any) => {
     <View style={styles.containerProfileItem}>
         
         <Text style={pickerSelectStyles.question}>
-         Question 1 will be here
+         Please enter what kind of degree are you pursuing
         </Text>
         <View style = {{marginLeft:10,marginTop: 10}} >
         
@@ -30,29 +29,42 @@ const Questionnaire = ({ navigation } : any) => {
         style={pickerSelectStyles}
         onValueChange={(value) => (value)}
         items={[
-            { label: 'Yes', value: 'yes' },
-            { label: 'No', value: 'no' },
+            { label: 'Bachelor', value: 'Bachelor' },
+            { label: 'Certificate', value: 'certificate' },
+            { label: 'Masters', value: 'master' },
+            { label: 'Minor', value: 'minor' },
+            { label: 'Major', value: 'major' },
+            { label: 'Phd', value: 'phd' },
         ]} />
         </View>
-      
         <Text style={pickerSelectStyles.question}>
-         Question 2 will be here
+         Please enter your program of education
         </Text>
-        <View style = {{marginLeft:10,marginTop: 10}} >
-        
-        <RNPickerSelect
-        style={pickerSelectStyles}
-        onValueChange={(value) => (value)}
-        items={[
-            { label: 'Yes', value: 'yes'},
-            { label: 'No', value: 'no'  },
-        ]} />
-        </View>
-    
+        <View style = {{height : 10}}></View>
+      <TextInput style = {{borderWidth: 1,borderRadius:10, fontSize:16,marginLeft:10,height:45, paddingVertical: 12,
+      paddingHorizontal: 10,}} placeholder = "Enter your program">
+
+      </TextInput>
+
         <Text style={pickerSelectStyles.question}>
-         Question 3 will be 
+        What year are you into
         </Text>
        <View style = {{marginLeft:10,marginTop: 10}} >
+        <RNPickerSelect
+        style={pickerSelectStyles}
+        onValueChange={(value) => (value)}
+        items={[
+            { label: '1st year', value: '1' },
+            { label: '2nd year', value: '2' },
+            { label: '3rd year', value: '3' },
+            { label: '4th year', value: '4' },
+
+        ]} />
+        </View>
+        <Text style={pickerSelectStyles.question}>
+        Do you seek other students’ opinions when you select your courses for the term?
+        </Text>
+        <View style = {{marginLeft:10,marginTop: 10}} >
         
         <RNPickerSelect
         style={pickerSelectStyles}
@@ -63,21 +75,59 @@ const Questionnaire = ({ navigation } : any) => {
         ]} />
         </View>
         <Text style={pickerSelectStyles.question}>
-         Question 2 will be here
+        Do you think an application like this is useful to your academic experience?
         </Text>
-     <TextInput style = {pickerSelectStyles.input}
+        <View style = {{marginLeft:10,marginTop: 10}} >
+        
+        <RNPickerSelect
+        style={pickerSelectStyles}
+        onValueChange={(value) => (value)}
+        items={[
+            { label: 'Yes', value: 'yes' },
+            { label: 'No', value: 'no' },
+        ]} />
+        </View>
+        
+     {/* <TextInput style = {pickerSelectStyles.input}
      multiline
      placeholder= " Enter Description...">
 
-     </TextInput>
+     </TextInput> */}
+
+    <Text style={pickerSelectStyles.question}>
+    On a scale of 1 to 10, how much did you find the application intuitive to use?  
+    </Text>
+
      <Rating
   type='star'
-  ratingCount={5}
-  imageSize={50}
+  ratingCount={10}
+  imageSize={30}
   showRating
-  fractions={2}/>
-  
+  fractions={2}
+  />
+  <Text style={pickerSelectStyles.question}>
+  On a scale of 1 to 10, how much did you enjoy using the application? 
+    </Text>
 
+     <Rating
+  type='star'
+  ratingCount={10}
+  imageSize={30}
+  showRating
+  fractions={2}
+  />
+  <Text style={pickerSelectStyles.question}>
+  On a scale of 1 to 10, how easy did you find our application to use?
+    </Text>
+
+     <Rating
+  type='star'
+  ratingCount={10}
+  imageSize={30}
+  showRating
+  fractions={2}
+  />
+  
       <View style={styles.containerSignButton}>
         <TouchableOpacity style={[styles.loginButton, {backgroundColor: "blue"}]}>
           <Text style={[styles.loginTextButton, {color: "#FFFFFF"}]}>Submit</Text>
