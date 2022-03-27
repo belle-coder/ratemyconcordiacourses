@@ -1,21 +1,13 @@
 import React from "react";
-import {
-    ScrollView,
-    View,
-    Text,
-    ImageBackground,
-    TouchableOpacity, FlatList,
-} from "react-native";
-import {CourseInList, Icon, ProfileItem} from "../components";
+import {ImageBackground, ScrollView, TouchableOpacity, View,} from "react-native";
+import {Icon, ProfileItem} from "../components";
 import DEMO from "../assets/data/demo";
 import styles, {WHITE} from "../assets/styles";
-import ReviewItem from "../components/ReviewItem";
-import reviewsData from "../assets/data/reviewsdata";
 import ReviewSection from "../components/ReviewSection";
 
 const CourseProfile = ({route}: any) => {
     const courseID = route.params
-    let reviewNum=DEMO[courseID-1].reviews;
+    let reviewNum = DEMO[courseID - 1].reviews;
     const {
         id,
         match,
@@ -65,15 +57,11 @@ const CourseProfile = ({route}: any) => {
                 />
 
 
-
             </ScrollView>
-            <ImageBackground source={"../assets/images/bg.png"} style={styles.bg2}>
-
-            <View style={styles.containerReview}>
+            <View style={styles.bg2}>
                 <ReviewSection
                     courseid={courseID}/>
             </View>
-            </ImageBackground>
         </ImageBackground>
 
     );
