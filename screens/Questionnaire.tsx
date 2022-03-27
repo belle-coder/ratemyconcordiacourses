@@ -5,6 +5,22 @@ import RNPickerSelect from 'react-native-picker-select';
 import { ScrollView, } from "react-native-gesture-handler";
 import { Rating } from 'react-native-ratings';
 
+
+
+    const degree = [
+        { label: 'Bachelor', value: 'Bachelor' },
+        { label: 'Certificate', value: 'certificate' },
+        { label: 'Masters', value: 'master' },
+        { label: 'Minor', value: 'minor' },
+        { label: 'Major', value: 'major' },
+        { label: 'Phd', value: 'phd' },]
+
+    const year = [
+        { label: '1st year', value: '1' },
+        { label: '2nd year', value: '2' },
+        { label: '3rd year', value: '3' },
+        { label: '4th year', value: '4' },]
+
 const Questionnaire = ({ navigation } : any) => {
    
     return (
@@ -28,14 +44,7 @@ const Questionnaire = ({ navigation } : any) => {
         <RNPickerSelect
         style={pickerSelectStyles}
         onValueChange={(value) => (value)}
-        items={[
-            { label: 'Bachelor', value: 'Bachelor' },
-            { label: 'Certificate', value: 'certificate' },
-            { label: 'Masters', value: 'master' },
-            { label: 'Minor', value: 'minor' },
-            { label: 'Major', value: 'major' },
-            { label: 'Phd', value: 'phd' },
-        ]} />
+        items={degree} />
         </View>
         <Text style={pickerSelectStyles.question}>
          Please enter your program of education
@@ -53,13 +62,7 @@ const Questionnaire = ({ navigation } : any) => {
         <RNPickerSelect
         style={pickerSelectStyles}
         onValueChange={(value) => (value)}
-        items={[
-            { label: '1st year', value: '1' },
-            { label: '2nd year', value: '2' },
-            { label: '3rd year', value: '3' },
-            { label: '4th year', value: '4' },
-
-        ]} />
+        items={year} />
         </View>
         <Text style={pickerSelectStyles.question}>
         Do you seek other students’ opinions when you select your courses for the term?
@@ -99,35 +102,38 @@ const Questionnaire = ({ navigation } : any) => {
     </Text>
 
      <Rating
-  type='star'
-  ratingCount={10}
-  imageSize={30}
-  showRating
-  fractions={2}
-  />
-  <Text style={pickerSelectStyles.question}>
-  On a scale of 1 to 10, how much did you enjoy using the application? 
+    type='star'
+    ratingCount={10}
+    imageSize={30}
+    showRating
+    fractions={2}
+    />
+    <Text style={pickerSelectStyles.question}>
+    On a scale of 1 to 10, how much did you enjoy using the application? 
     </Text>
 
      <Rating
-  type='star'
-  ratingCount={10}
-  imageSize={30}
-  showRating
-  fractions={2}
-  />
-  <Text style={pickerSelectStyles.question}>
-  On a scale of 1 to 10, how easy did you find our application to use?
+    type='star'
+    ratingCount={10}
+    imageSize={30}
+    showRating
+    fractions={2}/>
+
+    <Text style={pickerSelectStyles.question}>
+    On a scale of 1 to 10, how easy did you find our application to use?
     </Text>
 
      <Rating
-  type='star'
-  ratingCount={10}
-  imageSize={30}
-  showRating
-  fractions={2}
-  />
+    type='star'
+    ratingCount={10}
+    imageSize={30}
+    showRating
+    fractions={2}
+    />
   
+
+
+
       <View style={styles.containerSignButton}>
         <TouchableOpacity style={[styles.loginButton, {backgroundColor: "blue"}]}>
           <Text style={[styles.loginTextButton, {color: "#FFFFFF"}]}>Submit</Text>

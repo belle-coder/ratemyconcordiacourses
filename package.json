@@ -41,5 +41,18 @@
     "prettier": "^2.2.1",
     "typescript": "~4.0.0"
   },
-  "private": true
+  "private": true,
+  "name": "i",
+  "description": "<h1 align=\"center\">",
+  "version": "1.0.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/belle-coder/ratemyconcordiacourses.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/belle-coder/ratemyconcordiacourses/issues"
+  },
+  "homepage": "https://github.com/belle-coder/ratemyconcordiacourses#readme"
 }
