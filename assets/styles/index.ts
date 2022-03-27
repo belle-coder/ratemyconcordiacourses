@@ -237,7 +237,7 @@ export default StyleSheet.create({
     height: DIMENSION_HEIGHT,
   },
   bg2: {
-    flex: 10,
+    flex: 1000,
     resizeMode: "cover",
     width: DIMENSION_WIDTH,
     height: DIMENSION_HEIGHT,
@@ -311,10 +311,14 @@ export default StyleSheet.create({
   },
 
   // CONTAINER - PROFILE
-  containerProfile: { marginHorizontal: 0 },
-  photo: {
+  containerProfile: { marginHorizontal: 0,
     width: DIMENSION_WIDTH,
-    height: 450,
+    height: 250,
+
+  },
+  photo: {
+    height: 200,
+    resizeMode: 'contain',
   },
   // CONTAINER - PROFILE
   containerReview: {

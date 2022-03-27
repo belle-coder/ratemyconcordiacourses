@@ -22,6 +22,10 @@ const CourseProfile = ({route}: any) => {
             source={require("../assets/images/bg.png")}
             style={styles.bg}
         >
+            <ImageBackground
+            source={require("../assets/images/bg.png")}
+            style={styles.bg}
+        >
             <ScrollView style={styles.containerProfile}>
 
                 <ImageBackground source={image} style={styles.photo}>
@@ -58,11 +62,18 @@ const CourseProfile = ({route}: any) => {
 
 
             </ScrollView>
+            </ImageBackground>
+            <ImageBackground
+                source={require("../assets/images/bg.png")}
+                style={styles.bg}
+            >
             <View style={styles.bg2}>
                 <ReviewSection
                     courseid={courseID}/>
             </View>
         </ImageBackground>
+
+</ImageBackground>
 
     );
 };
