@@ -46,5 +46,5 @@ export type DataT = {
   match?: string;
   description: string;
   image: any;
-  reviews?: number;
+  reviews: number;
 };

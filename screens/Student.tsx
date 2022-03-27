@@ -3,7 +3,9 @@ import {ImageBackground, ScrollView, Text, TouchableOpacity, View,} from "react-
 import {Icon} from "../components";
 import styles, {DARK_GRAY} from "../assets/styles";
 
-const Student = ({navigation}: any) => {return (
+const Student = ({navigation}: any) => {
+    global.globalusername="TheBestKaylee123"
+    return (
     <ImageBackground source={require("../assets/images/bg.png")} style={styles.bg}>
         <ScrollView style={styles.containerProfile}>
             <ImageBackground source={require("../assets/images/student.jpg")} style={styles.photo1}>
