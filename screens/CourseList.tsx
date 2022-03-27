@@ -18,24 +18,10 @@ const CourseList = ({navigation}: any) => (
         style={styles.bg}
     >
         <View style={styles.containerMessages}>
-            <View style={styles.top}>
-                <Text style={styles.title}>Course List</Text>
-                <TouchableOpacity>
-                    <Icon name="ellipsis-vertical" color={DARK_GRAY} size={20}/>
-                </TouchableOpacity>
-            </View>
-
-            <FlatList
-                data={DEMO}
-                keyExtractor={(item, index) => index.toString()}
-                renderItem={({item}) => (
+            <View style={styles.top}><Text style={styles.title}>Course List</Text></View>
+            <FlatList data={DEMO} keyExtractor={(item, index) => index.toString()} renderItem={({item}) => (
                     <TouchableOpacity onPress={() => navigation.navigate("CourseProfile", item.id)}>
-                        <CourseInList
-                            image={item.image}
-                            name={item.name}
-                            description={item.description}
-                        />
-
+                        <CourseInList image={item.image} name={item.name} description={item.description}/>
                     </TouchableOpacity>
                 )}
             />

@@ -1,6 +1,6 @@
 import React from "react";
 import {Text, View, Image} from "react-native";
-import {MessageT} from "../types";
+import {MessageT} from "../assets/data/types";
 import styles from "../assets/styles";
 
 const CourseInList = ({image, description, name}: MessageT) => (

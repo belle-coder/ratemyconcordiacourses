@@ -1,4 +1,4 @@
-import { DataT } from "../../types";
+import { DataT } from "./types";
 import IMAGE_01 from "../images/java.jpg";
 import IMAGE_02 from "../images/mother.jpg";
 import IMAGE_03 from "../images/database.jpg";

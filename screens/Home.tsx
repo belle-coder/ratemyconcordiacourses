@@ -14,14 +14,12 @@ const Home = ({navigation}: any) => {
     const onHeartPress = () => {
         swiperRef?.current?.swipeRight();
     }
-
     return (
         <ImageBackground
             source={require("../assets/images/bg.png")}
             style={styles.bg}
         >
             <View style={styles.containerHome}>
-
                 <CardStack
                     loop
                     verticalSwipe={false}

@@ -1,4 +1,4 @@
-import {ReviewT} from "../../types";
+import {ReviewT} from "./types";
 
 
 const reviewsData: ReviewT[] = [

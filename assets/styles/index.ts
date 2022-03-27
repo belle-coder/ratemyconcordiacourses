@@ -249,6 +249,13 @@ export default StyleSheet.create({
     justifyContent: "space-between",
     alignItems: "center",
   },
+  top2: {
+    paddingTop: 20,
+    marginHorizontal: 10,
+    flexDirection: "row",
+    justifyContent: "space-between",
+    alignItems: "center",
+  },
   title: { paddingBottom: 10, fontSize: 22, color: DARK_GRAY },
   signIntitle: {paddingBottom: 10, fontSize: 22, color: DARK_GRAY, marginLeft: 20, fontWeight: "bold"},
 

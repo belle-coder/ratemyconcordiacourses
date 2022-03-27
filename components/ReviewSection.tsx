@@ -1,7 +1,7 @@
 import React from "react";
 import {FlatList, Text, TouchableOpacity, View} from "react-native";
 import Icon from "./Icon";
-import {DataT, ReviewT} from "../types";
+import {DataT, ReviewT} from "../assets/data/types";
 import styles, {DARK_GRAY, WHITE} from "../assets/styles";
 import DEMO from "../assets/data/demo";
 import {CourseInList} from "./index";
