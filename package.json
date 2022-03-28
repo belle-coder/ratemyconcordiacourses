@@ -16,12 +16,14 @@
     "expo-splash-screen": "~0.10.2",
     "expo-status-bar": "~1.0.4",
     "expo-updates": "~0.5.4",
-    "firebase": "8.2.3",
+    "firebase": "^9.6.10",
     "ionicons": "^6.0.1",
+    "node-json-db": "^1.5.0",
     "react": "16.13.1",
     "react-dom": "16.13.1",
     "react-native": "^0.67.4",
     "react-native-card-stack-swiper": "^1.2.5",
+    "react-native-fs": "^2.19.0",
     "react-native-gesture-handler": "~1.10.2",
     "react-native-paper": "^4.11.2",
     "react-native-ratings": "^8.1.0",
@@ -30,7 +32,11 @@
     "react-native-unimodules": "~0.13.3",
     "react-native-vector-icons": "^9.1.0",
     "react-native-web": "^0.17.7",
-    "react-navigation": "^4.4.4"
+    "react-navigation": "^4.4.4",
+    "realm": "^10.14.0",
+    "sortkeys": "^1.0.1",
+    "write-file-atomic": "^4.0.1",
+    "write-json-file": "^5.0.0"
   },
   "devDependencies": {
     "@babel/core": "~7.9.0",

@@ -1,20 +1,31 @@
 import React from "react";
 import {ImageBackground, ScrollView, Text, TextInput, TouchableOpacity, View,} from "react-native";
-import {Icon, ProfileItem} from "../components";
-import styles, {BLACK, DARK_GRAY, WHITE} from "../assets/styles";
-import DEMO from "../assets/data/demo";
+import {Icon} from "../components";
+import styles, { WHITE} from "../assets/styles";
 import {RadioButton} from 'react-native-paper';
 import {Rating} from 'react-native-ratings';
 import {ReviewT} from "../assets/data/types";
-import reviewsData from "../assets/data/reviewsdata";
-import set = Reflect.set;
 
 const LeaveReview = ({route, navigation}) => {
     const courseID = route.params
-    const [checked, setChecked] = React.useState('first');
-    const {id, match, description, name, image, reviews} = DEMO[courseID - 1];
-    let temp: ReviewT = {courseid:courseID, reviewid:reviews+1, username:'TheBestKaylee123', review:'test', recommend:true, overall:0};
+    let customData = require('./courses.json');
+    let reviews = customData.courses[courseID].reviews;
+    const [recommendd, setrecommend] = React.useState();
     const [reviewd, setreview] = React.useState();
+    const [ratingd, setrating] = React.useState();
+/*
+    const [todo, setTodo] = React.useState();
+    React.useEffect(() => {
+        fetch("https://api.jsonbin.io/v3/b/624100c7061827674380d394/1", {
+            method: "GET", headers: {"X-Master-Key": "$2b$10$7/c.W3mpcmJD74pen7tUU.ptj6mFMSDIiKuqx3BW50Dfz/z2.J.pC"}
+        }).then(res => res.json()).then((json) => setTodo(json));
+    }, []);
+    if (!todo) {return "loading..."}
+    console.log("JSON1 " + JSON.stringify(todo))
+    let revArray: ReviewT[] = todo.record.reviews
+    let temp: ReviewT = {courseid:courseID, reviewid:reviews+1, username:'TheBestKaylee123', review:'test', recommend:true, overall:0};
+*/
+
     return (
         <ImageBackground source={require("../assets/images/bg.png")} style={styles.bg}>
             <ImageBackground source={require("../assets/images/bg.png")} style={styles.bg}>
@@ -29,7 +40,7 @@ const LeaveReview = ({route, navigation}) => {
                     </View>
                     <View style={styles.containerProfileItem}>
                         <View style={styles.top2}><Text style={styles.title}>{name}</Text></View>
-                        <View style={styles.info}><Text style={styles.infoContent}>{description}</Text></View>
+                        <View style={styles.info}><Text style={styles.infoContent}>{customData.courses[courseID].description}</Text></View>
                     </View>
                     <View style={{marginTop: 30}}>
                         <View style={styles.containerProfileItem}>
@@ -38,47 +49,54 @@ const LeaveReview = ({route, navigation}) => {
                                 <View style={styles.info}>
                                     <Text style={styles.infoContent}>Rate it</Text>
                                     <Rating type='custom'
-                                        ratingCount={10}
-                                        imageSize={18}
-                                        startingValue={10}
-                                        style={{paddingVertical: 2, marginLeft:20}}
+                                            ratingCount={10}
+                                            imageSize={18} startingValue={10} style={{paddingVertical: 2, marginLeft:20}}
+                                            onFinishRating={setrating}
                                     />
                                 </View>
                                 <View style={styles.info}>
                                     <Text style={styles.infoContent}>Recommend this course?</Text>
-                                    <RadioButton value="true" status={checked === 'true' ? 'checked' : 'unchecked'}
-                                                 onPress={() => {
-                                                     setChecked('true')
-                                                     temp.recommend = true
-                                                     console.log(temp.recommend)
-                                                 }}/>
+                                    <RadioButton value="true" status={recommendd === 'true' ? 'checked' : 'unchecked'} onPress={() => {setrecommend('true')}}/>
                                     <Text style={styles.infoContent}>Yes</Text>
-                                    <RadioButton value="false" status={checked === 'false' ? 'checked' : 'unchecked'}
-                                                 onPress={() => {
-                                                     setChecked('false')
-                                                     temp.recommend=false
-                                                     console.log(temp.recommend)
-                                                 }}/>
+                                    <RadioButton value="false" status={recommendd === 'false' ? 'checked' : 'unchecked'} onPress={() => {setrecommend('false')}}/>
                                     <Text style={styles.infoContent}>No</Text>
                                 </View>
                                 <View style={styles.info}>
-                                    <TextInput
-                                        value={reviewd}
-                                        style={styles.reviewInput}
-                                        onChangeText={setreview}
-                                        placeholder={"Write your review here"}
-                                        keyboardType="default"
-                                    />
+                                    <TextInput value={reviewd} onChangeText={setreview}
+                                        style={styles.reviewInput} placeholder={"Write your review here"} keyboardType="default"/>
                                 </View>
                             </View>
                         </View>
                     </View>
                     <View style={styles.containerSignButton}>
-                        <TouchableOpacity style={[styles.loginButton, {backgroundColor: "#D2132A"}]}
+                        <TouchableOpacity style={[styles.loginButton, {backgroundColor: "#d2132a"}]}
                                           onPress={() => {
-                                              temp.review=setreview();
-                                              navigation.navigate('CourseList')
-                                          }}>
+/*
+                              const {id, name, match, description, image, reviews} = customData.courses[courseID];
+                              console.log("course number reviews : " + reviews)
+                              let temp2:ReviewT = {
+                                  "courseid": courseID, "reviewid": reviews + 1,
+                                  "username": temp.username, "review": reviewd,
+                                  "recommend": recommendd, "overall": ratingd
+                              };
+                              revArray.push(temp2)
+                              const [todo, setTodo] = React.useState();
+                              React.useEffect(() => {
+                                  fetch("https://api.jsonbin.io/v3/b/624100c7061827674380d394",{
+                                      method: "PUT",
+                                      headers: {
+                                          "Content-Type": "application/json",
+                                          "X-Master-Key": "$2b$10$7/c.W3mpcmJD74pen7tUU.ptj6mFMSDIiKuqx3BW50Dfz/z2.J.pC"
+                                      },
+                                      body: JSON.stringify(revArray)
+                                  }).then(res => res.json()).then((json) => setTodo(json));
+                              }, []);
+                              if (!todo) {
+                                  return "loading..."
+                              }
+*/
+
+                              navigation.navigate('CourseProfile', courseID)}}>
                             <Text style={[styles.loginTextButton, {color: "#FFFFFF"}]}>Submit</Text>
                         </TouchableOpacity>
                     </View>

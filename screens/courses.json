@@ -1,0 +1,244 @@
+{
+  "courses": [
+    {
+      "id": 1,
+      "name": "COMP 248",
+      "match": "78",
+      "description": "Introduction to Java and Object Oriented Programming",
+      "image": "../images/java.jpg",
+      "reviews": 2,
+      "coursereviews": [
+        {
+          "reviewid": 1,
+          "username": "hellopanda",
+          "review": "my very first programming assignments :')",
+          "recommend": true,
+          "overall": 7
+        },
+        {
+          "reviewid": 2,
+          "username": "iluvconcordia",
+          "review": "ahhhh all these good memories",
+          "recommend": true,
+          "overall": 10
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "COMP 228",
+      "match": "93",
+      "description": "Computer Hardware",
+      "image": "../images/mother.jpg",
+      "reviews": 2,
+      "coursereviews": [
+        {
+          "reviewid": 1,
+          "username": "stingersrock",
+          "review": "who goes into soen to take hard ware classes?",
+          "recommend": false,
+          "overall": 1
+        },
+        {
+          "reviewid": 2,
+          "username": "concordian10",
+          "review": "we all have to take this forsaken class",
+          "recommend": true,
+          "overall": 2
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "name": "COMP 353",
+      "match": "45",
+      "description": "Database and storage",
+      "image": "../images/database.jpg",
+      "reviews": 2,
+      "coursereviews": [
+        {
+          "reviewid": 1,
+          "username": "mcgillsux",
+          "review": "if you think you are done with discrete mathematics, think again with this class",
+          "recommend": false,
+          "overall": 5
+        },
+        {
+          "reviewid": 2,
+          "username": "beesknees",
+          "review": "dont take this class if u don't like sql",
+          "recommend": true,
+          "overall": 7
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "name": "COMP 445",
+      "match": "88",
+      "description": "Computer Networks and Communications",
+      "image": "../images/network.jpg",
+      "reviews": 2,
+      "coursereviews": [
+        {
+          "reviewid": 1,
+          "username": "compscinerd",
+          "review": "hard electives",
+          "recommend": false,
+          "overall": 7
+        },
+        {
+          "reviewid": 2,
+          "username": "haha012",
+          "review": "such an interesting class",
+          "recommend": true,
+          "overall": 10
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "name": "SOEN 357",
+      "match": "76",
+      "description": "User Interface and Design",
+      "image": "../images/interaction1.jpg",
+      "reviews": 2,
+      "coursereviews": [
+        {
+          "reviewid": 1,
+          "username": "concordia12",
+          "review": "now I can type UX UI IxD like all the cool kids on medium blogs",
+          "recommend": true,
+          "overall": 9
+        },
+        {
+          "reviewid": 2,
+          "username": "alexwashere",
+          "review": "what a great class",
+          "recommend": true,
+          "overall": 10
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "name": "SOEN 228",
+      "match": "95",
+      "description": "Web design",
+      "image": "../images/brush1.jpg",
+      "reviews": 2,
+      "coursereviews": [
+        {
+          "reviewid": 1,
+          "username": "watsdis",
+          "review": "easiest elective in compsci",
+          "recommend": true,
+          "overall": 10
+        },
+        {
+          "reviewid": 2,
+          "username": "hellokitty",
+          "review": "thanks to this course I got an internship",
+          "recommend": true,
+          "overall": 10
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "name": "COMP 352",
+      "match": "67",
+      "description": "Data Structure and Algorithms",
+      "image": "../images/structure.jpg",
+      "reviews": 2,
+      "coursereviews": [
+        {
+          "reviewid": 1,
+          "username": "iluvconcordia",
+          "review": "Such a great course!",
+          "recommend": true,
+          "overall": 7
+        },
+        {
+          "reviewid": 2,
+          "username": "stringersrock",
+          "review": "this most important class of our degree!",
+          "recommend": true,
+          "overall": 7
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "name": "PHIL 210",
+      "match": "85",
+      "description": "Introduction to Critical Thinking",
+      "image": "../images/brain.jpg",
+      "reviews": 2,
+      "coursereviews": [
+        {
+          "reviewid": 1,
+          "username": "iluvconcordia",
+          "review": "dont take this course thinking it's easy",
+          "recommend": false,
+          "overall": 2
+        },
+        {
+          "reviewid": 2,
+          "review": "it's an ok course",
+          "recommend": true,
+          "username": "concordia12",
+          "overall": 5
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "name": "MANA 202",
+      "match": "74",
+      "description": "Introduction to Human Behavior in Organisations",
+      "image": "../images/ob2.jpg",
+      "reviews": 2,
+      "coursereviews": [
+        {
+          "reviewid": 1,
+          "username": "concordia12",
+          "review": "I agree with the other user, this course is a blast",
+          "recommend": true,
+          "overall": 9
+        },
+        {
+          "reviewid": 2,
+          "username": "hellopanda",
+          "review": "I never knew management can be so interesting. definitely take this course",
+          "recommend": true,
+          "overall": 8
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "name": "MARK 201",
+      "match": "98",
+      "description": "Introduction to Marketing",
+      "image": "../images/analytics2.jpg",
+      "reviews": 2,
+      "coursereviews": [
+        {
+          "reviewid": 1,
+          "username": "stringersrock",
+          "review": "i didnt' learn anything new. boring",
+          "recommend": false,
+          "overall": 3
+        },
+        {
+          "reviewid": 2,
+          "username": "iluvconcordia",
+          "review": "I really enjoyed this marketing class",
+          "recommend": true,
+          "overall": 7
+        }
+      ]
+    }
+  ]
+}

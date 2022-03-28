@@ -272,6 +272,7 @@ export default StyleSheet.create({
   reviewInput: {
     height: 45,
     margin: 5,
+    borderWidth:2,
     bordercolor:BLACK,
     backgroundColor: WHITE,
     elevation: 1,

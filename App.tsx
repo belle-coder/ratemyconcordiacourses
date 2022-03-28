@@ -11,6 +11,7 @@ const Stack = createStackNavigator();
 const Tab = createBottomTabNavigator();
 
 function App() {
+
     return (
     <NavigationContainer>
     <Stack.Navigator initialRouteName="SignIn">
@@ -31,7 +32,7 @@ function App() {
                     <Tab.Screen name="Explore" component={Home} options={{tabBarIcon: ({focused}) => (<TabBarIcon focused={focused} iconName="search" text="Explore"/>),}}/>
                     <Tab.Screen name="Matches" component={Matches} options={{tabBarIcon: ({focused}) => (<TabBarIcon focused={focused} iconName="heart" text="Liked"/>),}}/>
                     <Tab.Screen name="Course List" component={CourseList} options={{tabBarIcon: ({focused}) => (
-                        <TabBarIcon focused={focused} iconName="barschart" text="Course List"/>),}}/>
+                        <TabBarIcon focused={focused} iconName="" text="Course List"/>),}}/>
                     <Tab.Screen name="Student" component={Student} options={{tabBarIcon: ({focused}) => (<TabBarIcon focused={focused} iconName="person" text="Profile"/>),}}/>
                 </Tab.Navigator>
             )}
