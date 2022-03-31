@@ -130,8 +130,23 @@ const Questionnaire = ({ navigation } : any) => {
     showRating
     fractions={2}
     />
-  
+   <Text style={pickerSelectStyles.question}>
+   What improvements do you think should be applied to the RateMyConcordiaCourses?
+        </Text>
+        <View style = {{height : 10}}></View>
+      <TextInput style = {{borderWidth: 1,borderRadius:10, fontSize:16,marginLeft:10,height:45, paddingVertical: 12,
+      paddingHorizontal: 10,}} placeholder = "Enter here">
 
+      </TextInput>
+
+      <Text style={pickerSelectStyles.question}>
+      Do you think it's more convenient that the app is portable on phones and computers
+        </Text>
+        <View style = {{height : 10}}></View>
+      <TextInput style = {{borderWidth: 1,borderRadius:10, fontSize:16,marginLeft:10,height:45, paddingVertical: 12,
+      paddingHorizontal: 10,}} placeholder = "Enter here">
+
+      </TextInput>
 
 
       <View style={styles.containerSignButton}>
