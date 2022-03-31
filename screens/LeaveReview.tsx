@@ -3,7 +3,6 @@ import {ImageBackground, ScrollView, Text, TextInput, TouchableOpacity, View,} f
 import {Icon, ProfileItem} from "../components";
 import styles, {BLACK, DARK_GRAY, WHITE} from "../assets/styles";
 import DEMO from "../assets/data/demo";
-import {RadioButton} from 'react-native-paper';
 import {Rating} from 'react-native-ratings';
 import {ReviewT} from "../assets/data/types";
 import reviewsData from "../assets/data/reviewsdata";
