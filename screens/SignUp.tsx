@@ -6,7 +6,7 @@ import { auth } from "../backend/firebase";
 
 function SignUp({ navigation } : any) {
   // const [values, setValues] = React.useState({email: '', password: '', password2: ''});
-  // const [isSecureEntry, setIsSecureEntry] = React.useState(true);  
+  const [isSecureEntry, setIsSecureEntry] = React.useState(true);  
 
   const [ email,setEmail]  = useState('');
   const [ password,setPassword]  = useState('');
@@ -46,10 +46,10 @@ function SignUp({ navigation } : any) {
             placeholder = "Password"
             style={styles.signIninput}
             onChangeText = {(text) => setPassword( text)}
-            // secureTextEntry = {isSecureEntry}
+            secureTextEntry = {isSecureEntry}
             value={password}
           />
-          <Text>Password must be at least 8 characters</Text>
+          <Text style= {{marginStart:20}}>Password must be at least 8 characters</Text>
         
        
       </SafeAreaView>

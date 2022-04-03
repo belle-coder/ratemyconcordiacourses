@@ -239,8 +239,10 @@ export default StyleSheet.create({
     backgroundColor: WHITE,
     elevation: 1,
     padding: 10,
-    borderRadius: 20,
+    borderRadius: 10,
     fontSize: 14,
+    borderWidth : 1
+    
   },
 
   // INPUT FIELD TEXT - SIGN IN
