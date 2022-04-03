@@ -27,7 +27,7 @@ function SignUp({ navigation }: any) {
       .then((userCredentials: { user: any }) => {
         const user = userCredentials.user;
         console.log(user.email);
-        navigation.navigate("SignIn"r);
+        navigation.navigate("SignIn");
       })
       .catch((error: { message: any }) => alert(error.message));
   };
