@@ -60,12 +60,7 @@ function SignIn({navigation}: any) {
         </TouchableOpacity>
       </View>
 
-                <View style={styles.containerSignButton}>
-                    <TouchableOpacity style={[styles.loginButton, {backgroundColor: "#D2132A"}]}
-                                      onPress={() => navigation.navigate('Tab')}>
-                        <Text style={[styles.loginTextButton, {color: "#FFFFFF"}]}>Log in</Text>
-                    </TouchableOpacity>
-                </View>
+                
 
                 <View style={[styles.containerSignButton, {marginTop: 20, marginBottom: 20}]}>
                     <Text style={{color: "#757E90"}}>Don't have an account ? </Text>
