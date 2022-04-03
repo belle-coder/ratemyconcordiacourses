@@ -30,7 +30,8 @@ function SignIn({navigation}: any) {
 
  
     return(
-        <ImageBackground>
+        <ImageBackground source={require("../assets/images/bg.png")}
+        style={styles.bg}>
     <View style={[styles.containerHome, styles.containerSignIn]}>
       <Text style={styles.signIntitle}>Sign In</Text>
       <SafeAreaView>
@@ -74,8 +75,7 @@ function SignIn({navigation}: any) {
                 </View>
             </View>
 
-        </ImageBackground>
-    )
+        </ImageBackground>    )
 };
 
 export default SignIn;
