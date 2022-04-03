@@ -10,6 +10,7 @@ import { Icon, ProfileItem } from "../components";
 import DEMO from "../assets/data/demo";
 import styles, { DARK_GRAY, WHITE } from "../assets/styles";
 
+
 const Student = ({ navigation } : any) => {
   return (
     <ImageBackground

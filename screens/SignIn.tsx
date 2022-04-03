@@ -17,9 +17,10 @@ function SignIn({ navigation } : any) {
     .then((userCredentials: { user: any; }) => {
       const user = userCredentials.user;
       console.log('logged in with ',user.email);
+      navigation.navigate('Tab');
     }).catch((error: { message: any; }) => alert(error.message))
   }
-  
+
 
   
   

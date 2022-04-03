@@ -11,11 +11,14 @@ function SignUp({ navigation } : any) {
   const [ email,setEmail]  = useState('');
   const [ password,setPassword]  = useState('');
   
+
+
   const handleSignup=() => {
     auth.createUserWithEmailAndPassword(email,password)
     .then((userCredentials: { user: any; }) => {
       const user = userCredentials.user;
       console.log(user.email);
+      navigation.navigate('Tab')
     }).catch((error: { message: any; }) => alert(error.message))
   }
   
