@@ -1,9 +1,24 @@
 export type CardItemT = {
   description?: string;
+  hasVariant?: boolean,
+  hasActions?: boolean,
   image: any;
   matches?: string;
   name: string;
+  onHeartPress?:  any
+  onXPress?: any
 };
+
+
+export type ReviewT = {
+  courseid: number,
+  reviewid?: number,
+  username?: string,
+  review?: string;
+  recommend?: boolean,
+  overall?: number,
+};
+
 
 export type IconT = {
   name: any;
@@ -31,8 +46,5 @@ export type DataT = {
   match?: string;
   description: string;
   image: any;
-  info1?: string;
-  info2?: string;
-  info3?: string;
-  info4?: string;
+  reviews: number;
 };

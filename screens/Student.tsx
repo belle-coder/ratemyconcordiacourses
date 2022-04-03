@@ -1,14 +1,7 @@
 import React from "react";
-import {
-  ScrollView,
-  View,
-  Text,
-  ImageBackground,
-  TouchableOpacity,
-} from "react-native";
-import { Icon, ProfileItem } from "../components";
-import DEMO from "../assets/data/demo";
-import styles, { DARK_GRAY, WHITE } from "../assets/styles";
+import {ImageBackground, ScrollView, Text, TouchableOpacity, View,} from "react-native";
+import {Icon} from "../components";
+import styles, {DARK_GRAY} from "../assets/styles";
 
 
 const Student = ({ navigation } : any) => {
@@ -48,7 +41,6 @@ const Student = ({ navigation } : any) => {
       </View>
       </ScrollView>
     </ImageBackground>
-  );
-};
+);};
 
 export default Student;

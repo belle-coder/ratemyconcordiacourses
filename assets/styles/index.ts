@@ -159,6 +159,20 @@ export default StyleSheet.create({
     fontSize: 12,
     paddingTop: 5,
   },
+  // COMPONENT - PROFILE ITEM
+  containerReviewItem: {
+    backgroundColor: WHITE,
+    paddingHorizontal: 10,
+    paddingBottom: 25,
+    margin: 20,
+    borderRadius: 8,
+    marginTop: -65,
+    elevation: 1,
+    shadowOpacity: 0.05,
+    shadowRadius: 10,
+    shadowColor: BLACK,
+    shadowOffset: { height: 0, width: 0 },
+  },
 
   // COMPONENT - PROFILE ITEM
   containerProfileItem: {
@@ -222,6 +236,12 @@ export default StyleSheet.create({
     width: DIMENSION_WIDTH,
     height: DIMENSION_HEIGHT,
   },
+  bg2: {
+    flex: 1000,
+    resizeMode: "cover",
+    width: DIMENSION_WIDTH,
+    height: DIMENSION_HEIGHT,
+  },
   top: {
     paddingTop: 50,
     marginHorizontal: 10,
@@ -229,8 +249,28 @@ export default StyleSheet.create({
     justifyContent: "space-between",
     alignItems: "center",
   },
+  top2: {
+    paddingTop: 20,
+    marginHorizontal: 10,
+    flexDirection: "row",
+    justifyContent: "space-between",
+    alignItems: "center",
+  },
   title: { paddingBottom: 10, fontSize: 22, color: DARK_GRAY },
-  signIntitle: {paddingBottom: 10, fontSize: 22, color: DARK_GRAY, marginLeft: 20, fontWeight: "bold"},
+  signIntitle: {
+    paddingBottom: 10,
+    fontSize: 22,
+    color: DARK_GRAY,
+    marginLeft: 20,
+    fontWeight: "bold",
+  },
+  signIntitle: {
+    paddingBottom: 10,
+    fontSize: 22,
+    color: DARK_GRAY,
+    marginLeft: 20,
+    fontWeight: "bold",
+  },
 
   // INPUT - SIGN IN
   signIninput: {
@@ -243,6 +283,16 @@ export default StyleSheet.create({
     fontSize: 14,
     borderWidth : 1
     
+  },
+  reviewInput: {
+    height: 45,
+    margin: 5,
+    borderColor: BLACK,
+    backgroundColor: WHITE,
+    elevation: 1,
+    padding: 10,
+    borderRadius: 20,
+    fontSize: 14,
   },
 
   // INPUT FIELD TEXT - SIGN IN
@@ -282,7 +332,7 @@ export default StyleSheet.create({
   containerMatches: {
     justifyContent: "space-between",
     flex: 1,
-    paddingHorizontal: 10,  
+    paddingHorizontal: 10,
   },
 
   // CONTAINER - MESSAGES
@@ -293,16 +343,26 @@ export default StyleSheet.create({
   },
 
   // CONTAINER - PROFILE
-  containerProfile: { marginHorizontal: 0 },
-  photo: {
+  containerProfile: {
+    marginHorizontal: 0,
     width: DIMENSION_WIDTH,
-    height: 450,
+    height: 250,
+  },
+  photo: {
+    height: 200,
+    resizeMode: "contain",
+  },
+  // CONTAINER - PROFILE
+  containerReview: {
+    marginHorizontal: 0,
+    paddingTop: 10,
+    marginTop: 5,
   },
   photo1: {
     width: 250,
     height: 250,
-    marginLeft:50,
-    marginTop:100,
+    marginLeft: 50,
+    marginTop: 100,
     paddingLeft: 350,
     paddingTop: 350,
   },

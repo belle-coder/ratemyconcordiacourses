@@ -4,9 +4,8 @@ import { Text, TouchableOpacity, ImageBackground, View, TextInput, SafeAreaView 
 import styles from "../assets/styles";
 import { auth } from "../backend/firebase";
 
-function SignIn({ navigation } : any) {
+function SignIn({navigation}: any) {
 
-  // const [values, setValues] = React.useState({email: '', password: ''});
   const [isSecureEntry, setIsSecureEntry] = React.useState(true);  
 
   const [ email,setEmail]  = useState('');
@@ -29,12 +28,9 @@ function SignIn({ navigation } : any) {
     return regexp.test(email);
   };
 
-  return(
-    <ImageBackground
-      source={require("../assets/images/bg.png")}
-      style={styles.bg}
-    >
-
+ 
+    return(
+        <ImageBackground>
     <View style={[styles.containerHome, styles.containerSignIn]}>
       <Text style={styles.signIntitle}>Sign In</Text>
       <SafeAreaView>
@@ -63,15 +59,23 @@ function SignIn({ navigation } : any) {
         </TouchableOpacity>
       </View>
 
-      <View style={[styles.containerSignButton, {marginTop: 20, marginBottom: 20}]}>
-        <Text style={{color: "#757E90"}}>Don't have an account ? </Text>
-        <TouchableOpacity style={{marginLeft: 5}} onPress={() => navigation.navigate('SignUp')}>
-            <Text style={[styles.loginTextButton, {color: "#D2132A"}]}>Sign up</Text>
-          </TouchableOpacity>
-      </View>
-    </View>
+                <View style={styles.containerSignButton}>
+                    <TouchableOpacity style={[styles.loginButton, {backgroundColor: "#D2132A"}]}
+                                      onPress={() => navigation.navigate('Tab')}>
+                        <Text style={[styles.loginTextButton, {color: "#FFFFFF"}]}>Log in</Text>
+                    </TouchableOpacity>
+                </View>
 
-    </ImageBackground>
-)};
+                <View style={[styles.containerSignButton, {marginTop: 20, marginBottom: 20}]}>
+                    <Text style={{color: "#757E90"}}>Don't have an account ? </Text>
+                    <TouchableOpacity style={{marginLeft: 5}} onPress={() => navigation.navigate('SignUp')}>
+                        <Text style={[styles.loginTextButton, {color: "#D2132A"}]}>Sign up</Text>
+                    </TouchableOpacity>
+                </View>
+            </View>
+
+        </ImageBackground>
+    )
+};
 
 export default SignIn;
