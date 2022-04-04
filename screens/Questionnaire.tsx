@@ -1,11 +1,11 @@
 import React from "react";
 import styles, { WHITE } from "../assets/styles";
-import {TouchableOpacity, View,Text,StyleSheet,TextInput } from "react-native";
+import {TouchableOpacity, View,Text,StyleSheet,TextInput, GestureResponderEvent } from "react-native";
 import RNPickerSelect from 'react-native-picker-select';
 import { ScrollView, } from "react-native-gesture-handler";
 import { Rating } from 'react-native-ratings';
 
-
+   
 
     const degree = [
         { label: 'Bachelor', value: 'Bachelor' },
@@ -150,7 +150,9 @@ const Questionnaire = ({ navigation } : any) => {
 
 
       <View style={styles.containerSignButton}>
-        <TouchableOpacity style={[styles.loginButton, {backgroundColor: "blue"}]}>
+        <TouchableOpacity 
+       
+        style={[styles.loginButton, {backgroundColor: "blue"}]}>
           <Text style={[styles.loginTextButton, {color: "#FFFFFF"}]}>Submit</Text>
         </TouchableOpacity>
       </View>
