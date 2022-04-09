@@ -22,7 +22,7 @@ function SignIn({ navigation }: any) {
 
   const handleSignup = () => {
     auth
-      .signInWithEmailAndPassword(email, password)
+      .signInWithEmailAndPassword(email.trim(), password)
       .then((userCredentials: { user: any }) => {
         const user = userCredentials.user;
         console.log("logged in with ", user.email);
