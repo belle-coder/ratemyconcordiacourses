@@ -23,11 +23,11 @@ function SignUp({ navigation }: any) {
 
   const handleSignup = () => {
     auth
-      .createUserWithEmailAndPassword(email, password)
+      .createUserWithEmailAndPassword(email.trim(), password)
       .then((userCredentials: { user: any }) => {
         const user = userCredentials.user;
         console.log(user.email);
-        navigation.navigate("SignIn");
+        navigation.navigate("Tab");
       })
       .catch((error: { message: any }) => alert(error.message));
   };
