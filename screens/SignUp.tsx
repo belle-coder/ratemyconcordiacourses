@@ -32,12 +32,6 @@ function SignUp({ navigation }: any) {
       .catch((error: { message: any }) => alert(error.message));
   };
 
-  const validateEmail = (email: any) => {
-    const regexp =
-      /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-    return regexp.test(email);
-  };
-
   return (
     <ImageBackground
       source={require("../assets/images/bg.png")}
@@ -50,7 +44,7 @@ function SignUp({ navigation }: any) {
             placeholder="Email"
             style={[styles.signIninput, { marginTop: 20 }]}
             onChangeText={(text) => {
-              setEmail(text), validateEmail(text);
+              setEmail(text);
             }}
             value={email}
           />
@@ -68,17 +62,6 @@ function SignUp({ navigation }: any) {
             Password must be at least 8 characters
           </Text>
         </SafeAreaView>
-
-        {/* <SafeAreaView>
-        <TextInput
-            placeholder = "Re-enter password"
-            style={styles.signIninput}
-            onChangeText = {(text) => handleChange('password2', text)}
-            secureTextEntry = {isSecureEntry}
-            value={values.password2}
-          />
-        {values.password !== values.password2 && values.password2 !== '' && <Text style={{color: "red", marginLeft: 20}}>Passwords don't match. Try again.</Text>}
-      </SafeAreaView> */}
 
         <View style={styles.containerSignButton}>
           <TouchableOpacity
