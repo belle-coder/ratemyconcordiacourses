@@ -9,7 +9,7 @@ import {
   SafeAreaView,
 } from "react-native";
 import styles from "../assets/styles";
-import { auth } from "../backend/firebase";
+import { auth,db } from "../backend/firebase";
 import { LogBox } from 'react-native';
 
 LogBox.ignoreLogs(['Setting a timer']);
@@ -27,6 +27,9 @@ function SignUp({ navigation }: any) {
       .then((userCredentials: { user: any }) => {
         const user = userCredentials.user;
         console.log(user.email);
+        db.collection("Users").add({
+          email: user.email,
+        }).catch(err => console.log(err))
         navigation.navigate("Tab");
       })
       .catch((error: { message: any }) => alert(error.message));
