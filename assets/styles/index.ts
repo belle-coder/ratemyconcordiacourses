@@ -264,14 +264,7 @@ export default StyleSheet.create({
     marginLeft: 20,
     fontWeight: "bold",
   },
-  signIntitle: {
-    paddingBottom: 10,
-    fontSize: 22,
-    color: DARK_GRAY,
-    marginLeft: 20,
-    fontWeight: "bold",
-  },
-
+  
   // INPUT - SIGN IN
   signIninput: {
     height: 40,
@@ -279,8 +272,10 @@ export default StyleSheet.create({
     backgroundColor: WHITE,
     elevation: 1,
     padding: 10,
-    borderRadius: 20,
+    borderRadius: 10,
     fontSize: 14,
+    borderWidth : 1
+    
   },
   reviewInput: {
     height: 45,
