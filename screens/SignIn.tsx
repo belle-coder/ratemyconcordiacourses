@@ -1,71 +1,100 @@
-import React from "react";
-import {Text, TouchableOpacity, ImageBackground, View, TextInput, SafeAreaView} from "react-native";
+import { useNavigation } from "@react-navigation/native";
+import React, { useEffect, useState } from "react";
+import {
+  Text,
+  TouchableOpacity,
+  ImageBackground,
+  View,
+  TextInput,
+  SafeAreaView,
+} from "react-native";
 import styles from "../assets/styles";
+import { auth } from "../backend/firebase";
+import { LogBox } from "react-native";
 
-function SignIn({navigation}: any) {
+LogBox.ignoreLogs(["Setting a timer"]);
 
-    const [values, setValues] = React.useState({email: '', password: ''});
-    const [isSecureEntry, setIsSecureEntry] = React.useState(true);
+function SignIn({ navigation }: any) {
+  const [isSecureEntry, setIsSecureEntry] = React.useState(true);
 
-    const handleChange = (name: any, value: any) => {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
 
-        setValues({
-            ...values,
-            [name]: value,
-        });
-    };
+  const handleSignup = () => {
+    auth
+      .signInWithEmailAndPassword(email.trim(), password)
+      .then((userCredentials: { user: any }) => {
+        const user = userCredentials.user;
+        console.log("logged in with ", user.email);
+        navigation.navigate("Tab");
+      })
+      .catch((error: { message: any }) => alert(error.message));
+  };
 
-    const validateEmail = (email: any) => {
-        const regexp = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-        return regexp.test(email);
-    };
+  const validateEmail = (email: any) => {
+    const regexp =
+      /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    return regexp.test(email);
+  };
 
-    return (
-        <ImageBackground
-            source={require("../assets/images/bg.png")}
-            style={styles.bg}
+  return (
+    <ImageBackground
+      source={require("../assets/images/bg.png")}
+      style={styles.bg}
+    >
+      <View style={[styles.containerHome, styles.containerSignIn]}>
+        <Text style={styles.signIntitle}>Sign In</Text>
+        <SafeAreaView>
+          <TextInput
+            placeholder="Email"
+            style={[styles.signIninput, { marginTop: 20 }]}
+            onChangeText={(text) => {
+              setEmail(text), validateEmail(text);
+            }}
+            value={email}
+          />
+        </SafeAreaView>
+
+        <SafeAreaView>
+          <TextInput
+            placeholder="Password"
+            style={styles.signIninput}
+            onChangeText={(text) => setPassword(text)}
+            secureTextEntry={isSecureEntry}
+            value={password}
+          />
+        </SafeAreaView>
+
+        <View style={styles.containerSignButton}>
+          <TouchableOpacity
+            style={[styles.loginButton, { backgroundColor: "#D2132A" }]}
+            onPress={handleSignup}
+          >
+            <Text style={[styles.loginTextButton, { color: "#FFFFFF" }]}>
+              Log in
+            </Text>
+          </TouchableOpacity>
+        </View>
+
+        <View
+          style={[
+            styles.containerSignButton,
+            { marginTop: 20, marginBottom: 20 },
+          ]}
         >
-
-            <View style={[styles.containerHome, styles.containerSignIn]}>
-                <Text style={styles.signIntitle}>Sign In</Text>
-                <SafeAreaView>
-                    <TextInput
-                        placeholder="Email"
-                        style={[styles.signIninput, {marginTop: 20}]}
-                        onChangeText={(text) => {
-                            handleChange('email', text), validateEmail(text)
-                        }}
-                        value={values.email}
-                    />
-                </SafeAreaView>
-
-                <SafeAreaView>
-                    <TextInput
-                        placeholder="Password"
-                        style={styles.signIninput}
-                        onChangeText={(text) => handleChange('password', text)}
-                        secureTextEntry={isSecureEntry}
-                        value={values.password}
-                    />
-                </SafeAreaView>
-
-                <View style={styles.containerSignButton}>
-                    <TouchableOpacity style={[styles.loginButton, {backgroundColor: "#D2132A"}]}
-                                      onPress={() => navigation.navigate('Tab')}>
-                        <Text style={[styles.loginTextButton, {color: "#FFFFFF"}]}>Log in</Text>
-                    </TouchableOpacity>
-                </View>
-
-                <View style={[styles.containerSignButton, {marginTop: 20, marginBottom: 20}]}>
-                    <Text style={{color: "#757E90"}}>Don't have an account ? </Text>
-                    <TouchableOpacity style={{marginLeft: 5}} onPress={() => navigation.navigate('SignUp')}>
-                        <Text style={[styles.loginTextButton, {color: "#D2132A"}]}>Sign up</Text>
-                    </TouchableOpacity>
-                </View>
-            </View>
-
-        </ImageBackground>
-    )
-};
+          <Text style={{ color: "#757E90" }}>Don't have an account ? </Text>
+          <TouchableOpacity
+            style={{ marginLeft: 5 }}
+            onPress={() => navigation.navigate("SignUp")}
+          >
+            <Text style={[styles.loginTextButton, { color: "#D2132A" }]}>
+              Sign up
+            </Text>
+          </TouchableOpacity>
+        </View>
+      </View>
+    </ImageBackground>
+  );
+}
 
 export default SignIn;

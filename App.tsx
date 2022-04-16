@@ -14,7 +14,8 @@ import {
 } from "./screens";
 import { PRIMARY_COLOR, DARK_GRAY, BLACK, WHITE } from "./assets/styles";
 import TabBarIcon from "./components/TabBarIcon";
-import LeaveReview from "./screens/LeaveReview";
+import { CardItem, CourseInList, ProfileItem } from "./components";
+import data from "./assets/data/demo";
 
 const Stack = createStackNavigator();
 const Tab = createBottomTabNavigator();
@@ -33,16 +34,7 @@ function App() {
           component={SignUp}
           options={{ headerShown: false, animationEnabled: false }}
         />
-        <Stack.Screen
-          name="CourseProfile"
-          component={CourseProfile}
-          options={{ title: "Course Profile" }}
-        />
-        <Stack.Screen
-          name="LeaveReview"
-          component={LeaveReview}
-          options={{ title: "Leave a Review for This Course" }}
-        />
+        <Stack.Screen name="CourseProfile" component={CourseProfile} />
         <Stack.Screen
           name="Tab"
           options={{ headerShown: false, animationEnabled: false }}
@@ -82,6 +74,7 @@ function App() {
                   ),
                 }}
               />
+
               <Tab.Screen
                 name="Matches"
                 component={Matches}
@@ -95,6 +88,7 @@ function App() {
                   ),
                 }}
               />
+
               <Tab.Screen
                 name="Course List"
                 component={CourseList}
@@ -102,12 +96,13 @@ function App() {
                   tabBarIcon: ({ focused }) => (
                     <TabBarIcon
                       focused={focused}
-                      iconName="barschart"
+                      iconName=""
                       text="Course List"
                     />
                   ),
                 }}
               />
+
               <Tab.Screen
                 name="Student"
                 component={Student}
