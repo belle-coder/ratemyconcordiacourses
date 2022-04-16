@@ -10,6 +10,7 @@ import {
   SignIn,
   SignUp,
   Student,
+  Questionnaire,
 } from "./screens";
 import { PRIMARY_COLOR, DARK_GRAY, BLACK, WHITE } from "./assets/styles";
 import TabBarIcon from "./components/TabBarIcon";
@@ -111,6 +112,20 @@ function App() {
                       focused={focused}
                       iconName="person"
                       text="Profile"
+                    />
+                  ),
+                }}
+              />
+
+              <Tab.Screen
+                name="Questionnaire"
+                component={Questionnaire}
+                options={{
+                  tabBarIcon: ({ focused }) => (
+                    <TabBarIcon
+                      focused={focused}
+                      iconName="question"
+                      text="Questionnaire"
                     />
                   ),
                 }}
