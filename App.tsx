@@ -11,6 +11,7 @@ import {
   SignUp,
   Student,
   Questionnaire,
+  LeaveReview
 } from "./screens";
 import { PRIMARY_COLOR, DARK_GRAY, BLACK, WHITE } from "./assets/styles";
 import TabBarIcon from "./components/TabBarIcon";
@@ -33,6 +34,11 @@ function App() {
           name="SignUp"
           component={SignUp}
           options={{ headerShown: false, animationEnabled: false }}
+        />
+        <Stack.Screen
+          name="LeaveReview"
+          component={LeaveReview}
+          // options={{ headerShown: false, animationEnabled: false }}
         />
         <Stack.Screen name="CourseProfile" component={CourseProfile} />
         <Stack.Screen
@@ -96,7 +102,7 @@ function App() {
                   tabBarIcon: ({ focused }) => (
                     <TabBarIcon
                       focused={focused}
-                      iconName=""
+                      iconName="list"
                       text="Course List"
                     />
                   ),
@@ -121,10 +127,10 @@ function App() {
                 name="Questionnaire"
                 component={Questionnaire}
                 options={{
-                  tabBarIcon: ({ focused }) => (
+                  tabBarIcon: ({ focused }) => ( 
                     <TabBarIcon
                       focused={focused}
-                      iconName="question"
+                      iconName="body"
                       text="Questionnaire"
                     />
                   ),

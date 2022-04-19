@@ -6,7 +6,7 @@ import {
   Text,
   StyleSheet,
   TextInput,
-  GestureResponderEvent,
+  Alert,
 } from "react-native";
 import RNPickerSelect from "react-native-picker-select";
 import { ScrollView } from "react-native-gesture-handler";
@@ -187,6 +187,9 @@ const Questionnaire = ({ navigation }: any) => {
           <View style={styles.containerSignButton}>
             <TouchableOpacity
               style={[styles.loginButton, { backgroundColor: "blue" }]}
+              onPress={()=>{
+                alert("submit successfully ")
+              }}
             >
               <Text style={[styles.loginTextButton, { color: "#FFFFFF" }]}>
                 Submit
