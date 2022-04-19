@@ -6,3 +6,4 @@ export { default as Student } from "./Student";
 export { default as SignIn } from "./SignIn";
 export { default as SignUp } from "./SignUp";
 export { default as Questionnaire } from "./Questionnaire";
+export { default as  LeaveReview} from './LeaveReview'

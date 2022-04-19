@@ -25,4 +25,12 @@ if (firebase.apps.length === 0) {
 const db = firebase.firestore();
 const auth = firebase.auth();
 
-export { db, auth};
+export { db, auth };
+
+export const loginInfo = {
+  email: ''
+}
+
+export function setLoginInfo(info) {
+  loginInfo.email = info.email
+}

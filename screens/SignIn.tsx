@@ -9,7 +9,7 @@ import {
   SafeAreaView,
 } from "react-native";
 import styles from "../assets/styles";
-import { auth } from "../backend/firebase";
+import { auth ,setLoginInfo} from "../backend/firebase";
 import { LogBox } from "react-native";
 
 LogBox.ignoreLogs(["Setting a timer"]);
@@ -26,6 +26,7 @@ function SignIn({ navigation }: any) {
       .then((userCredentials: { user: any }) => {
         const user = userCredentials.user;
         console.log("logged in with ", user.email);
+        setLoginInfo(user )
         navigation.navigate("Tab");
       })
       .catch((error: { message: any }) => alert(error.message));
