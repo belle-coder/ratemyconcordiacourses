@@ -188,7 +188,7 @@ const Questionnaire = ({ navigation }: any) => {
             <TouchableOpacity
               style={[styles.loginButton, { backgroundColor: "blue" }]}
               onPress={()=>{
-                Alert.alert("submit successfully ")
+                alert("submit successfully ")
               }}
             >
               <Text style={[styles.loginTextButton, { color: "#FFFFFF" }]}>

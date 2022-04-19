@@ -152,7 +152,7 @@ const LeaveReview = ({ route, navigation }) => {
               style={[styles.loginButton, { backgroundColor: "#D2132A" }]}
               onPress={() => {
                 reviewsData.push(reviewd);
-                Alert.alert("submit successfully ")
+                alert("submit successfully ")
                 navigation.pop();
               }}
             >
