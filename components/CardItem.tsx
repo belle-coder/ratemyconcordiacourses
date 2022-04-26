@@ -9,7 +9,7 @@ import styles, {
   STAR_ACTIONS,
   WHITE,
 } from "../assets/styles";
-import { db } from "../backend/firebase";
+import { auth, db } from "../backend/firebase";
 
 const CardItem = ({
   description,
@@ -46,16 +46,17 @@ const CardItem = ({
 
   const handleHeartClick = () => {
     onHeartPress;
-    db.collection("Users").doc(`marwa190@test.com`).update({
+    db.collection("Users").doc(auth.currentUser.email).update({
       name: name,
     });
   };
 
   const handleXClick = () => {
     onXPress;
-    db.collection("Users").doc(`marwa190@test.com`).update({
-      name: name,
+    db.collection("Users").doc(auth.currentUser.email).update({
+      name: "Test1",
     });
+    console.log("Made it");
   };
 
   return (
@@ -88,11 +89,11 @@ const CardItem = ({
 
       {hasActions && (
         <View style={styles.actionsCardItem}>
-          <TouchableOpacity style={styles.button} onPress={handleXClick}>
+          <TouchableOpacity style={styles.button} onPress={() => handleXClick}>
             <Icon name="close" color={DISLIKE_ACTIONS} size={25} />
           </TouchableOpacity>
 
-          <TouchableOpacity style={styles.button} onPress={handleHeartClick}>
+          <TouchableOpacity style={styles.button} onPress={onHeartPress}>
             <Icon name="heart" color="#D2132A" size={25} />
           </TouchableOpacity>
         </View>
