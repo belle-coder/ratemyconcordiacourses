@@ -9,10 +9,9 @@ import styles, {
   STAR_ACTIONS,
   WHITE,
 } from "../assets/styles";
-import { addVotes } from "../backend/firebaseVotes.js";
-import { getAuth } from "firebase/auth";
+import { db } from "../backend/firebase";
 
-function CardItem({
+const CardItem = ({
   description,
   hasActions,
   hasVariant,
@@ -21,7 +20,7 @@ function CardItem({
   name,
   onHeartPress,
   onXPress,
-}: CardItemT) {
+}: CardItemT) => {
   // Custom styling
   const fullWidth = Dimensions.get("window").width;
 
@@ -45,11 +44,19 @@ function CardItem({
     },
   ];
 
-  const auth = getAuth();
-  const user = auth.currentUser;
-  if (user !== null) {
-    const email = user.email;
-  }
+  const handleHeartClick = () => {
+    onHeartPress;
+    db.collection("Users").doc(`marwa190@test.com`).update({
+      name: name,
+    });
+  };
+
+  const handleXClick = () => {
+    onXPress;
+    db.collection("Users").doc(`marwa190@test.com`).update({
+      name: name,
+    });
+  };
 
   return (
     <View style={styles.containerCardItem}>
@@ -81,20 +88,17 @@ function CardItem({
 
       {hasActions && (
         <View style={styles.actionsCardItem}>
-          <TouchableOpacity style={styles.button} onPress={onXPress}>
+          <TouchableOpacity style={styles.button} onPress={handleXClick}>
             <Icon name="close" color={DISLIKE_ACTIONS} size={25} />
           </TouchableOpacity>
 
-          <TouchableOpacity
-            style={styles.button}
-            onPress={() => addVotes("marwa190@test.com", "COMP 353", "LIKE")}
-          >
+          <TouchableOpacity style={styles.button} onPress={handleHeartClick}>
             <Icon name="heart" color="#D2132A" size={25} />
           </TouchableOpacity>
         </View>
       )}
     </View>
   );
-}
+};
 
 export default CardItem;
