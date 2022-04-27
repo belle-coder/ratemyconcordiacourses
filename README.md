@@ -42,13 +42,16 @@ cd ratemyconcordiacourses
 Install packages :
 
 ```
-yarn
+1. Do npm install --global expo-cli
+2. Do npm install -g yarn
+3. And then do yarn
 ```
 
 When installation is complete, run it :
 
 ```
-yarn start
+yarn web
 ```
+You can run it on your web page, or there should be a QR code, (need the Expo GO app on Android), and the application will run on the mobile device.
 
 
