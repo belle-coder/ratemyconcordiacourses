@@ -36,7 +36,7 @@ Clone this repository :
 
 ```
 git clone https://github.com/belle-coder/ratemyconcordiacourses.git
-cd ratemyconcordiacourses
+
 ```
 
 Install packages :
